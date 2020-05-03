@@ -173,6 +173,7 @@
                     android:src="@drawable/Phone"
                     android:layout_centerInParent="true"/>
                 <Button
+                    android:id="@+id/contactButton"
                     android:layout_width="56dp"
                     android:layout_height="56dp"
                     android:background="@drawable/hollow_circle"
@@ -206,6 +207,7 @@
                         android:src="@drawable/ambulance"
                         android:layout_centerInParent="true"/>
                     <Button
+                        android:id="@+id/ambulanceButton"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:background="@drawable/hollow_circle"
@@ -239,6 +241,7 @@
                         android:src="@drawable/police"
                         android:layout_centerInParent="true"/>
                     <Button
+                        android:id="@+id/policeButton"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:background="@drawable/hollow_circle"
@@ -272,6 +275,7 @@
                         android:src="@drawable/Sections"
                         android:layout_centerInParent="true"/>
                     <Button
+                        android:id="@+id/liveDataButton"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
                         android:background="@drawable/hollow_circle"
