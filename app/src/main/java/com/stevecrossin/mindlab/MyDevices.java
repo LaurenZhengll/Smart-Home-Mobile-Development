@@ -1,10 +1,13 @@
 package com.stevecrossin.mindlab;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Switch;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +44,22 @@ public class MyDevices extends AppCompatActivity {
 
             com.stevecrossin.mindlab.DeviceBean property = new com.stevecrossin.mindlab.DeviceBean (i, image, status, priority);
             propertyList.add(property);
-
         }
+        this.setTitle("My Devices");
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch(item.getItemId()){
+            case android.R.id.home:
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
