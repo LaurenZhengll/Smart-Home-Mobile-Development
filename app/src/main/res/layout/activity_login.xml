@@ -80,6 +80,7 @@
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:onClick="GoToDevices"
             app:backgroundTint="#00BBFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
