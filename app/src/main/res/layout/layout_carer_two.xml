@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:text="Response in:"
             android:textColor="#2699FB"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="65dp"/>
         <TextView
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="09:47"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:textStyle="bold"
             android:textColor="#2699FB"
             android:layout_marginTop="8dp"/>
@@ -118,7 +118,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="234 Burwood Hwy"
-                        android:textSize="13dp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:textColor="#2699FB"
                         android:layout_marginLeft="2dp"/>
@@ -128,20 +128,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="18dp"
                         android:text="Emergency:"
-                        android:textSize="11dp"
-                        android:textStyle="bold"
-                        android:textColor="#2699FB"/>
+                        android:textColor="#2699FB"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/emergencyCase"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="FALLING"
-                        android:textSize="13dp"
+                        android:textSize="13sp"
                         android:textStyle="bold"
                         android:textColor="#FB2657"
                         android:layout_marginLeft="2dp"/>
@@ -155,20 +156,149 @@
             android:orientation="horizontal"
             android:gravity="center_vertical"
             android:layout_marginTop="55dp">
+            <LinearLayout
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginLeft="11dp">
 
+                <RelativeLayout
+                    android:layout_width="56dp"
+                    android:layout_height="56dp">
+                <ImageView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/Phone"
+                    android:layout_centerInParent="true"/>
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/hollow_circle"
+                    android:gravity="center|bottom"/>
+                </RelativeLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONTACT"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:textColor="#2699FB"
+                    android:layout_marginTop="7dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginLeft="27dp">
+
+                <RelativeLayout
+                    android:layout_width="56dp"
+                    android:layout_height="56dp">
+                    <ImageView
+                        android:id="@+id/ambulance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ambulance"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/hollow_circle"
+                        android:gravity="center|bottom"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AMBULANCE"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:textColor="#2699FB"
+                    android:layout_marginTop="7dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginLeft="27dp">
+
+                <RelativeLayout
+                    android:layout_width="56dp"
+                    android:layout_height="56dp">
+                    <ImageView
+                        android:id="@+id/police"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/police"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/hollow_circle"
+                        android:gravity="center|bottom"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POLICE"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:textColor="#2699FB"
+                    android:layout_marginTop="7dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginLeft="27dp">
+
+                <RelativeLayout
+                    android:layout_width="56dp"
+                    android:layout_height="56dp">
+                    <ImageView
+                        android:id="@+id/livedata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/Sections"
+                        android:layout_centerInParent="true"/>
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/hollow_circle"
+                        android:gravity="center|bottom"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LIVE DATA"
+                    android:textSize="8sp"
+                    android:textStyle="bold"
+                    android:textColor="#2699FB"
+                    android:layout_marginTop="7dp"/>
+            </LinearLayout>
         </LinearLayout>
 
 
-        <!--        <Button-->
-        <!--            android:id="@+id/responseButton"-->
-        <!--            android:layout_width="230dp"-->
-        <!--            android:layout_height="40dp"-->
-        <!--            android:background="@drawable/button"-->
-        <!--            android:text="RESPONSE"-->
-        <!--            android:textSize="20dp"-->
-        <!--            android:textColor="#ffffff"-->
-        <!--            android:layout_marginTop="56dp"/>-->
+                <Button
+                    android:id="@+id/clearButton"
+                    android:layout_width="230dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/alert_btn_red"
+                    android:text="CLEAR"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginTop="44dp"/>
     </LinearLayout>
 
     <ImageView
