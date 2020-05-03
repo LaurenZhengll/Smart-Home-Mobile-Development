@@ -45,7 +45,9 @@ public class MyDevices extends AppCompatActivity {
             com.stevecrossin.mindlab.DeviceBean property = new com.stevecrossin.mindlab.DeviceBean (i, image, status, priority);
             propertyList.add(property);
         }
+
         this.setTitle("My Devices");
+
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null){
             actionBar.setHomeButtonEnabled(true);

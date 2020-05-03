@@ -6,9 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -57,6 +59,29 @@ public class PropertyAdapter  extends RecyclerView.Adapter<PropertyAdapter.Prope
         holder.avatarImageView.setImageResource(propertyList.get(position).getImage());
         holder.statusTextView.setText(propertyList.get(position).getStatus());
         holder.priorityTextView.setText(propertyList.get(position).getPriority());
+        switch (propertyList.get(position).getStatus()){
+            case "Operating":
+                holder.statusTextView.setTextColor(ContextCompat.getColor(context,R.color.green));
+                break;
+            case "Unavailable":
+                holder.statusTextView.setTextColor(ContextCompat.getColor(context,R.color.gray));
+                break;
+            default:
+                break;
+        }
+        switch (propertyList.get(position).getPriority()){
+            case "HIGH":
+                holder.priorityTextView.setTextColor(ContextCompat.getColor(context,R.color.red));
+                break;
+            case "Medium":
+                holder.priorityTextView.setTextColor(ContextCompat.getColor(context,R.color.orange));
+                break;
+            case "Low":
+                holder.priorityTextView.setTextColor(ContextCompat.getColor(context,R.color.green));
+                break;
+            default:
+                break;
+        }
     }
     // Return the size of your dataset (invoked by the layout manager)
     @Override
