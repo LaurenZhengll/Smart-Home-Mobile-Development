@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="327dp"
+    android:layout_height="497dp"
+    android:layout_gravity="center"
+    android:background="@drawable/relativelayout_style"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ALERT"
+            android:textStyle="bold"
+            android:textColor="#FB2657"
+            android:textSize="30dp"
+            android:layout_marginTop="31dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="32dp">
+
+            <ImageView
+                android:id="@+id/patientImage"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="49dp"
+                android:background="@drawable/circle"/>
+            <TextView
+                android:id="@+id/emergencyCase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FALL"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#fb2657"
+                android:layout_marginLeft="14dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="detected"
+                android:textColor="#2699FB"
+                android:textSize="16dp"
+                android:layout_marginLeft="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="203dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Response in:"
+                android:textColor="#2699FB"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="19dp"/>
+            <TextView
+                android:id="@+id/countDownTimerOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09:47"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                android:textColor="#2699FB"
+                android:layout_marginTop="26dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auto response in:"
+                android:textColor="#2699fb"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:layout_marginTop="43dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:07"
+                android:textSize="20dp"
+                android:textColor="#2699FB"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/responseButton"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:background="@drawable/alert_btn"
+            android:text="RESPONSE"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="56dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="219dp"
+        android:layout_marginLeft="112dp"
+        android:background="@drawable/circle"
+        android:alpha="0.2"/>
+    <ImageView
+        android:layout_width="203dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="169dp"
+        android:layout_marginLeft="62dp"
+        android:background="@drawable/circle"
+        android:alpha="0.1"/>
+</RelativeLayout>

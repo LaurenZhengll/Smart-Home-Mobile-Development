@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="327dp"
+    android:layout_height="497dp"
+    android:layout_gravity="center"
+    android:background="@drawable/relativelayout_style"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Response in:"
+            android:textColor="#2699FB"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="65dp"/>
+        <TextView
+            android:id="@+id/countDownTimerOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:47"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="#2699FB"
+            android:layout_marginTop="8dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="47dp">
+
+            <ImageView
+                android:id="@+id/patientImage"
+                android:layout_width="61dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="49dp"
+                android:background="@drawable/circle"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="22dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name:"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#2699FB"/>
+
+                    <TextView
+                        android:id="@+id/patientName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fiona Lau"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#2699FB"
+                        android:layout_marginLeft="2dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age:"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#2699FB"/>
+
+                    <TextView
+                        android:id="@+id/patientAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="74"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="#2699FB"
+                        android:layout_marginLeft="2dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address:"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:textColor="#2699FB"/>
+
+                    <TextView
+                        android:id="@+id/patientAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="234 Burwood Hwy"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:textColor="#2699FB"
+                        android:layout_marginLeft="2dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emergency:"
+                        android:textSize="11dp"
+                        android:textStyle="bold"
+                        android:textColor="#2699FB"/>
+
+                    <TextView
+                        android:id="@+id/emergencyCase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FALLING"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:textColor="#FB2657"
+                        android:layout_marginLeft="2dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="55dp">
+
+
+        </LinearLayout>
+
+
+        <!--        <Button-->
+        <!--            android:id="@+id/responseButton"-->
+        <!--            android:layout_width="230dp"-->
+        <!--            android:layout_height="40dp"-->
+        <!--            android:background="@drawable/button"-->
+        <!--            android:text="RESPONSE"-->
+        <!--            android:textSize="20dp"-->
+        <!--            android:textColor="#ffffff"-->
+        <!--            android:layout_marginTop="56dp"/>-->
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="103dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginLeft="112dp"
+        android:background="@drawable/circle"
+        android:alpha="0.2"/>
+    <ImageView
+        android:layout_width="203dp"
+        android:layout_height="203dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="62dp"
+        android:background="@drawable/circle"
+        android:alpha="0.1"/>
+</RelativeLayout>
