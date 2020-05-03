@@ -99,6 +99,7 @@
             android:textColor="#00BBFF"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:onClick="GoToAddNewDevices"
             app:backgroundTint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -23,4 +23,32 @@
         <item>TAS</item>
         <item>ACT</item>
     </string-array>
+
+    <!--arrays using in Add New Device layout-->
+    <string-array name="location">
+        <item>Kitchen</item>
+        <item>Living Room</item>
+        <item>Study</item>
+        <item>Bed Room</item>
+        <item>Dinning Room</item>
+        <item>Restroom</item>
+    </string-array>
+
+    <string-array name="device_Type">
+        <item>Device Camera</item>
+        <item>Sensor</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Operating</item>
+        <item>Available</item>
+        <item>Unavailable</item>
+    </string-array>
+
+    <string-array name="priority">
+        <item>HIGH</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
 </resources>

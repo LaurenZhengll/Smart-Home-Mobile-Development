@@ -20,4 +20,12 @@ public class LoginScreen extends AppCompatActivity {
         Intent intent = new Intent(this, MyDevices.class);
         startActivity(intent);
     }
+
+    /**
+     * This is an intent. When the method is called by the OnClick, it will navigate to the relevant screen
+     **/
+    public void GoToAddNewDevices(View view) {
+        Intent intent = new Intent(this, AddNewDevice.class);
+        startActivity(intent);
+    }
 }
