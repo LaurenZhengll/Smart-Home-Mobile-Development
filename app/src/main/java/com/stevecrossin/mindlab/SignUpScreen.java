@@ -1,6 +1,5 @@
 package com.stevecrossin.mindlab;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,11 +16,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class SignUpScreen extends Activity {
+public class SignUpScreen extends AppCompatActivity {
 
     private EditText username;
     private EditText userPassword;
-    private Button signUp;
     private FirebaseAuth auth;
 
     @Override
@@ -29,7 +27,7 @@ public class SignUpScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         auth = FirebaseAuth.getInstance();
-        signUp = findViewById(R.id.createbtn);
+        Button signUp = findViewById(R.id.createbtn);
         username = findViewById(R.id.signupUsername);
         userPassword = findViewById(R.id.signupPassword);
 
