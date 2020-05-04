@@ -27,5 +27,6 @@ public class LoginScreen extends AppCompatActivity {
     public void GoToAddNewDevices(View view) {
         Intent intent = new Intent(this, AddNewDevice.class);
         startActivity(intent);
+        //
     }
 }
