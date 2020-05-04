@@ -1,0 +1,7 @@
+Changelog - please add all changes you make here at the end of each coding session.
+
+Format needs to have - your name, day, date, the files that you worked on, and changes you made to them.
+
+4 May - Steve C
+* Re-add bugs/changelog/todo/licenses files
+* Signup.java - remove redundant classes, tidy code
