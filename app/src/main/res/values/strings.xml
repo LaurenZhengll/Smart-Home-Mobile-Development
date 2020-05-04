@@ -10,9 +10,12 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="privacy"><u>Privacy Policy</u></string>
+    <string name="minimum_password">The password must be longer than 6 characters!</string>
+    <string name="auth_failed">Authentication failed.</string>
 
     <!--States to be selected from the spinner in signup page-->
     <string name="state_prompt">State</string>
+    <string name="mainActivityTestLabel">This is the screen after login</string>
     <string-array name="state_arrays">
         <item>"State"</item>
         <item>VIC</item>
