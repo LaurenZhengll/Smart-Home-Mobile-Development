@@ -28,13 +28,10 @@ public class SignUpScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
         auth = FirebaseAuth.getInstance();
-
-        signUp = (Button) findViewById(R.id.createbtn);
-        username = (EditText) findViewById(R.id.signupUsername);
-        userPassword = (EditText) findViewById(R.id.signupPassword);
-
+        signUp = findViewById(R.id.createbtn);
+        username = findViewById(R.id.signupUsername);
+        userPassword = findViewById(R.id.signupPassword);
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
