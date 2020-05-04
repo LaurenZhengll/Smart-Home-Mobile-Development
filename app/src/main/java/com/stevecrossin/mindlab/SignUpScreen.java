@@ -21,6 +21,7 @@ public class SignUpScreen extends AppCompatActivity {
     private EditText username;
     private EditText userPassword;
     private FirebaseAuth auth;
+    // this is for testing merge
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
