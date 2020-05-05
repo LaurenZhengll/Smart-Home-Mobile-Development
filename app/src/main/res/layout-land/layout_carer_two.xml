@@ -12,39 +12,16 @@
         android:layout_height="0dp"
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
-        android:layout_marginTop="117dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
-        android:layout_marginBottom="117dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/layout_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-        <ImageView
-            android:id="@+id/bgLarge"
-            android:layout_width="203dp"
-            android:layout_height="203dp"
-            android:layout_marginTop="20dp"
-            android:alpha="0.1"
-            android:background="@drawable/circle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/bgSmall"
-            android:layout_width="103dp"
-            android:layout_height="103dp"
-            android:alpha="0.2"
-            android:background="@drawable/circle"
-            app:layout_constraintBottom_toBottomOf="@+id/bgLarge"
-            app:layout_constraintEnd_toEndOf="@+id/bgLarge"
-            app:layout_constraintStart_toStartOf="@+id/bgLarge"
-            app:layout_constraintTop_toTopOf="@+id/bgLarge" />
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/responseText"
@@ -59,7 +36,6 @@
             app:layout_constraintStart_toStartOf="@+id/bgLarge"
             app:layout_constraintTop_toTopOf="@+id/bgLarge" />
 
-
         <TextView
             android:id="@+id/countDownTimerOne"
             android:layout_width="wrap_content"
@@ -73,16 +49,20 @@
             app:layout_constraintStart_toStartOf="@+id/bgLarge"
             app:layout_constraintTop_toTopOf="@+id/bgLarge" />
 
+
         <ImageView
             android:id="@+id/patientImage"
             android:layout_width="61dp"
             android:layout_height="61dp"
-            android:layout_marginStart="23dp"
-            android:layout_marginLeft="23dp"
-            android:layout_marginTop="191dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
             android:layout_marginBottom="56dp"
             android:background="@drawable/circle"
             app:layout_constraintBottom_toTopOf="@id/contactStruc"
+            app:layout_constraintEnd_toStartOf="@+id/bgLarge"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,9 +71,9 @@
             android:id="@+id/nameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
-            android:layout_marginTop="191dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
             android:layout_marginBottom="3dp"
@@ -103,7 +83,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/ageText"
             app:layout_constraintEnd_toStartOf="@+id/patientName"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bgLarge"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -111,7 +91,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-            android:layout_marginTop="189dp"
+            android:layout_marginTop="100dp"
             android:layout_marginBottom="1dp"
             android:text="Fiona Lau"
             android:textColor="#2699FB"
@@ -126,8 +106,8 @@
             android:id="@+id/ageText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
@@ -138,7 +118,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/addressText"
             app:layout_constraintEnd_toStartOf="@id/patientAge"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bgLarge"
             app:layout_constraintTop_toBottomOf="@id/nameText" />
 
         <TextView
@@ -161,8 +141,8 @@
             android:id="@+id/addressText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
@@ -173,7 +153,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/caseText"
             app:layout_constraintEnd_toStartOf="@id/patientAddress"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bgLarge"
             app:layout_constraintTop_toBottomOf="@id/ageText" />
 
         <TextView
@@ -196,19 +176,18 @@
             android:id="@+id/caseText"
             android:layout_width="wrap_content"
             android:layout_height="18dp"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
-            android:layout_marginBottom="56dp"
             android:text="Emergency:"
             android:textColor="#2699FB"
             android:textSize="11sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/policeStruc"
             app:layout_constraintEnd_toStartOf="@id/emergencyCase"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bgLarge"
             app:layout_constraintTop_toBottomOf="@id/addressText" />
 
         <TextView
@@ -217,7 +196,6 @@
             android:layout_height="18dp"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="1dp"
-            android:layout_marginBottom="56dp"
             android:text="FALLING"
             android:textColor="#FB2657"
             android:textSize="13sp"
@@ -233,7 +211,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="11dp"
             android:layout_marginLeft="11dp"
-            android:layout_marginTop="307dp"
+            android:layout_marginTop="270dp"
             android:layout_marginEnd="27dp"
             android:layout_marginRight="27dp"
             android:layout_marginBottom="60dp"
@@ -278,7 +256,7 @@
             android:id="@+id/ambulanceStruc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="307dp"
+            android:layout_marginTop="270dp"
             android:layout_marginEnd="27dp"
             android:layout_marginRight="27dp"
             android:layout_marginBottom="60dp"
@@ -323,7 +301,7 @@
             android:id="@+id/policeStruc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="307dp"
+            android:layout_marginTop="270dp"
             android:layout_marginEnd="27dp"
             android:layout_marginRight="27dp"
             android:layout_marginBottom="60dp"
@@ -368,7 +346,7 @@
             android:id="@+id/dataSturc"
             android:layout_width="56dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="307dp"
+            android:layout_marginTop="270dp"
             android:layout_marginEnd="11dp"
             android:layout_marginRight="11dp"
             android:layout_marginBottom="60dp"
@@ -418,7 +396,7 @@
             android:layout_marginLeft="49dp"
             android:layout_marginEnd="48dp"
             android:layout_marginRight="48dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/alert_btn_red"
             android:text="CLEAR"
             android:textColor="#ffffff"
@@ -427,6 +405,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+        <ImageView
+            android:id="@+id/bgLarge"
+            android:layout_width="203dp"
+            android:layout_height="203dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="3dp"
+            android:alpha="0.1"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toTopOf="@+id/ambulanceStruc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bgSmall"
+            android:layout_width="103dp"
+            android:layout_height="103dp"
+            android:alpha="0.2"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@+id/bgLarge"
+            app:layout_constraintEnd_toEndOf="@+id/bgLarge"
+            app:layout_constraintStart_toStartOf="@+id/bgLarge"
+            app:layout_constraintTop_toTopOf="@+id/bgLarge" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

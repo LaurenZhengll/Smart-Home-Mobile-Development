@@ -11,10 +11,10 @@
         android:layout_height="0dp"
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
-        android:layout_marginTop="117dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
-        android:layout_marginBottom="117dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/layout_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,10 +29,10 @@
             android:layout_height="103dp"
             android:alpha="0.2"
             android:background="@drawable/circle"
-            app:layout_constraintTop_toTopOf="@id/countDownTimerOne"
-            app:layout_constraintStart_toStartOf="@id/countDownTimerOne"
+            app:layout_constraintBottom_toBottomOf="@id/countDownTimerOne"
             app:layout_constraintEnd_toEndOf="@id/countDownTimerOne"
-            app:layout_constraintBottom_toBottomOf="@id/countDownTimerOne"/>
+            app:layout_constraintStart_toStartOf="@id/countDownTimerOne"
+            app:layout_constraintTop_toTopOf="@id/countDownTimerOne" />
 
         <ImageView
             android:id="@+id/bgCircleOne"
@@ -40,26 +40,21 @@
             android:layout_height="203dp"
             android:alpha="0.1"
             android:background="@drawable/circle"
-            app:layout_constraintTop_toTopOf="@id/countDownTimerOne"
-            app:layout_constraintStart_toStartOf="@id/countDownTimerOne"
+            app:layout_constraintBottom_toBottomOf="@id/countDownTimerOne"
             app:layout_constraintEnd_toEndOf="@id/countDownTimerOne"
-            app:layout_constraintBottom_toBottomOf="@id/countDownTimerOne"/>
+            app:layout_constraintStart_toStartOf="@id/countDownTimerOne"
+            app:layout_constraintTop_toTopOf="@id/countDownTimerOne" />
 
 
         <TextView
             android:id="@+id/alertText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="118dp"
-            android:layout_marginLeft="118dp"
-            android:layout_marginTop="31dp"
-            android:layout_marginEnd="118dp"
-            android:layout_marginRight="118dp"
             android:text="ALERT"
             android:textColor="#FB2657"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/emergencyCase"
+            app:layout_constraintBottom_toTopOf="@+id/bgCircleOne"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -70,47 +65,41 @@
             android:layout_height="61dp"
             android:layout_marginStart="49dp"
             android:layout_marginLeft="49dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginRight="14dp"
+
             android:background="@drawable/circle"
-            app:layout_constraintEnd_toStartOf="@+id/emergencyCase"
+            app:layout_constraintBottom_toTopOf="@id/responseButton"
+            app:layout_constraintEnd_toStartOf="@+id/bgCircleOne"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/alertText"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/emergencyCase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginLeft="14dp"
-            android:layout_marginTop="52dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
             android:text="FALL"
             android:textColor="#fb2657"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/patientImage"
-            app:layout_constraintTop_toBottomOf="@id/alertText"
-            app:layout_constraintEnd_toStartOf="@id/detectedText"/>
+            app:layout_constraintBottom_toTopOf="@+id/responseButton"
+            app:layout_constraintEnd_toStartOf="@id/detectedText"
+            app:layout_constraintStart_toEndOf="@+id/bgCircleOne"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/detectedText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
             android:layout_marginEnd="93dp"
             android:layout_marginRight="93dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
             android:text="detected"
             android:textColor="#2699FB"
             android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/responseButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/alertText"
-            app:layout_constraintStart_toEndOf="@id/emergencyCase"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/responseTextOne"
@@ -122,61 +111,60 @@
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/countDownTimerOne"
-            app:layout_constraintEnd_toEndOf="@+id/bgCircleOne"
-            app:layout_constraintStart_toStartOf="@+id/bgCircleOne"
-            app:layout_constraintTop_toBottomOf="@id/patientImage" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alertText" />
 
-            <TextView
-                android:id="@+id/countDownTimerOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="31dp"
-                android:text="09:47"
-                android:textColor="#2699FB"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/responseTextOne"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/responseTextTwo"/>
+        <TextView
+            android:id="@+id/countDownTimerOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:text="09:47"
+            android:textColor="#2699FB"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/responseTextTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/responseTextOne" />
 
-            <TextView
-                android:id="@+id/responseTextTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="43dp"
-                android:layout_marginBottom="2dp"
-                android:text="Auto response in:"
-                android:textColor="#2699fb"
-                android:textSize="13sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/countDownTimerOne"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/countDownTimerTwo"/>
+        <TextView
+            android:id="@+id/responseTextTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:layout_marginBottom="2dp"
+            android:text="Auto response in:"
+            android:textColor="#2699fb"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/countDownTimerTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/countDownTimerOne" />
 
-            <TextView
-                android:id="@+id/countDownTimerTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="00:07"
-                android:textColor="#2699FB"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/responseTextTwo"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/responseButton"/>
+        <TextView
+            android:id="@+id/countDownTimerTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="00:07"
+            android:textColor="#2699FB"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/responseButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/responseTextTwo" />
 
         <Button
             android:id="@+id/responseButton"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_marginTop="51dp"
-            android:layout_marginBottom="30dp"
-            android:layout_marginRight="49dp"
             android:layout_marginLeft="49dp"
+            android:layout_marginRight="49dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/alert_btn_green"
             android:text="RESPONSE"
             android:textColor="#ffffff"
