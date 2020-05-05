@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/createAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
         android:layout_marginTop="49dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="35dp"
         android:text="Create Account"
         android:textColor="#00BBFF"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/familyName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,38 +23,39 @@
         android:id="@+id/familyName"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/signup_plaintext"
         android:ems="10"
         android:gravity="center"
         android:hint="Family Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@id/givenName"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dob"
+        app:layout_constraintEnd_toStartOf="@id/givenName"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createAccount" />
+        app:layout_constraintTop_toBottomOf="@id/createAccount" />
 
     <!--given name-->
     <EditText
         android:id="@+id/givenName"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
         android:ems="10"
         android:gravity="center"
         android:hint="Given Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@id/dob"
+        app:layout_constraintBottom_toTopOf="@id/address"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/familyName" />
+        app:layout_constraintStart_toEndOf="@id/familyName"
+        app:layout_constraintTop_toBottomOf="@id/createAccount" />
 
     <!--date of birth-->
     <EditText
@@ -68,38 +64,36 @@
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/signup_plaintext"
         android:ems="10"
         android:gravity="center"
         android:hint="Date of Birth"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@id/address"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/stateSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/address"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/givenName" />
+        app:layout_constraintTop_toBottomOf="@id/familyName" />
 
     <!--address-->
     <EditText
         android:id="@+id/address"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
         android:ems="10"
         android:gravity="center"
         android:hint="Address"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@id/stateSpinner"
+        app:layout_constraintBottom_toTopOf="@id/emergencyNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dob" />
+        app:layout_constraintStart_toEndOf="@id/dob"
+        app:layout_constraintTop_toBottomOf="@id/givenName" />
 
     <!--spinner to select the state-->
     <Spinner
@@ -108,28 +102,26 @@
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/signup_plaintext"
         android:entries="@array/state_arrays"
         android:gravity="center_horizontal"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@id/emergencyNumber"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/signupUsername"
+        app:layout_constraintEnd_toStartOf="@+id/emergencyNumber"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/address" />
+        app:layout_constraintTop_toBottomOf="@id/dob" />
 
     <!--emergency number-->
     <EditText
         android:id="@+id/emergencyNumber"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
         android:ems="10"
         android:gravity="center"
@@ -137,8 +129,8 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@id/signupUsername"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/stateSpinner" />
+        app:layout_constraintStart_toEndOf="@id/stateSpinner"
+        app:layout_constraintTop_toBottomOf="@id/address" />
 
     <!--username-->
     <EditText
@@ -147,29 +139,27 @@
         android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/signup_plaintext"
         android:ems="10"
         android:gravity="center"
         android:hint="Username"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@id/signupPassword"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/createbtn"
+        app:layout_constraintEnd_toStartOf="@id/signupPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emergencyNumber" />
+        app:layout_constraintTop_toBottomOf="@id/stateSpinner" />
 
     <!--password-->
     <EditText
         android:id="@+id/signupPassword"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
         android:ems="10"
         android:gravity="center"
@@ -177,8 +167,8 @@
         android:inputType="textPersonName|textPassword"
         app:layout_constraintBottom_toTopOf="@id/createbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signupUsername" />
+        app:layout_constraintStart_toEndOf="@+id/signupUsername"
+        app:layout_constraintTop_toBottomOf="@id/emergencyNumber" />
 
     <!--create account button-->
     <Button
