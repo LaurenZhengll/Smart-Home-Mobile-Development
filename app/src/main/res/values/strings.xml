@@ -10,6 +10,29 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="privacy"><u>Privacy Policy</u></string>
+    <string name="patient_detail">Patient Detail</string>
+    <string name="backbtn">Back Button</string>
+    <string name="name">Fiona Lau</string>
+    <string name="age">Age 74</string>
+    <string name="state">Burwood, VIC</string>
+    <string name="patientPic">Patient profile picture</string>
+    <string name="mobile_number">0451001001</string>
+    <string name="mobile">Mobile</string>
+    <string name="mobile_pic">Mobile icon</string>
+    <string name="condition_info">Hypertension</string>
+    <string name="condition">Medical condition</string>
+    <string name="condition_pic">medical condition icon</string>
+    <string name="allergy_info">Penicillin</string>
+    <string name="allergy">Allergy</string>
+    <string name="allergy_pic">Allergy icon</string>
+    <string name="address_info">345 Burwood Highway</string>
+    <string name="address">Address</string>
+    <string name="address_pic">Address icon</string>
+    <string name="contact_number">0451000001</string>
+    <string name="contact_name">Adam Smith</string>
+    <string name="contact">Emergency Contact</string>
+    <string name="contact_pic">emergency contact icon</string>
+
 
     <!--States to be selected from the spinner in signup page-->
     <string name="state_prompt">State</string>
