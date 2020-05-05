@@ -9,17 +9,15 @@
         android:id="@+id/textBg6"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="26dp"
         android:background="#F1F9FF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg5" />
+        app:layout_constraintStart_toEndOf="@id/textBg5"
+        app:layout_constraintTop_toBottomOf="@+id/textBg4" />
 
     <ImageView
         android:id="@+id/contactImg"
@@ -75,15 +73,15 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="25dp"
         android:background="#F1F9FF"
-        app:layout_constraintBottom_toTopOf="@+id/textBg6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textBg6"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg4" />
+        app:layout_constraintTop_toBottomOf="@+id/textBg3" />
 
     <ImageView
         android:id="@+id/addressImg"
@@ -138,17 +136,15 @@
         android:id="@+id/textBg4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
         android:background="#F1F9FF"
-        app:layout_constraintBottom_toTopOf="@+id/textBg5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg3" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textBg3"
+        app:layout_constraintTop_toBottomOf="@+id/textBg2"
+        app:layout_constraintBottom_toTopOf="@id/textBg6"/>
 
     <TextView
         android:id="@+id/allergyText"
@@ -205,14 +201,14 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
+        android:layout_marginEnd="15dp"
         android:background="#F1F9FF"
-        app:layout_constraintBottom_toTopOf="@+id/textBg4"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textBg5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg2" />
+        app:layout_constraintTop_toBottomOf="@+id/textBg"
+        app:layout_constraintEnd_toStartOf="@id/textBg4"
+        android:layout_marginRight="15dp" />
 
     <TextView
         android:id="@+id/conditionInfoText"
@@ -226,6 +222,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@id/conditionText"
         app:layout_constraintEnd_toEndOf="@+id/textBg3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textBg3"
         app:layout_constraintTop_toTopOf="@+id/textBg3" />
 
@@ -267,16 +264,15 @@
         android:id="@+id/textBg2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginTop="37dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="20dp"
         android:background="#F1F9FF"
-        app:layout_constraintBottom_toTopOf="@+id/textBg3"
+        app:layout_constraintBottom_toTopOf="@+id/textBg4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg" />
+        app:layout_constraintStart_toEndOf="@id/textBg"
+        app:layout_constraintTop_toBottomOf="@id/patientDetail" />
 
     <ImageButton
         android:id="@+id/backButton"
@@ -285,8 +281,8 @@
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
         android:layout_marginBottom="22dp"
         android:background="#FFFFFF"
         android:contentDescription="@string/backbtn"
@@ -323,12 +319,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp"
         android:background="#F1F9FF"
-        app:layout_constraintBottom_toTopOf="@+id/textBg2"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textBg3"
+        app:layout_constraintEnd_toStartOf="@id/textBg2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/patientDetail" />
 
@@ -449,7 +446,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="5dp"
         android:text="@string/contact_number"
         android:textColor="@color/blue"
         android:textSize="18sp"
