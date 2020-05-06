@@ -23,4 +23,20 @@
         <item>TAS</item>
         <item>ACT</item>
     </string-array>
+
+    <!--Font size to be selected from the spinner in Settings page-->
+    <string name="font_prompt">Medium</string>
+    <string-array name="font_arrays">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    <!--Languages to be selected from the spinner in Settings page-->
+    <string name="language_prompt">English</string>
+    <string-array name="language_arrays">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Spanish</item>
+    </string-array>
 </resources>
