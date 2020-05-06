@@ -28,29 +28,14 @@ public class LoginScreen extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = auth.getCurrentUser();
 
-        /*if (currentUser.isLoggedIn = true)
+        if (currentUser != null)
         {
             startActivity(new Intent(LoginScreen.this, MainActivity.class));
             finish();
         }
         else return;
-    }*/
     }
 
- /*   private void updateUI (FirebaseUser user){
-        if (user != null) {
-            // This code is redundant as not n
-            //inputEmail.setText(getString(R.string.google_status_fmt, user.getEmail()));
-            //inputPassword.setText(getString(R.string.firebase_status_fmt, user.getUid()));
-
-            findViewById(R.id.signup).setVisibility(View.GONE);
-        } else {
-            inputEmail.setText(null);
-            inputPassword.setText(null);
-
-            findViewById(R.id.signup).setVisibility(View.VISIBLE);
-        }
-    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +45,10 @@ public class LoginScreen extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
     }
 
-    public void onStop() {
-        super.onStop();
-        FirebaseAuth.getInstance().signOut();
-    }
+//    public void onStop() {
+//        super.onStop();
+//        FirebaseAuth.getInstance().signOut();
+//    }
 
     /**
      * Authentication task. This method is invoke through onClick of login button in activity_login.
