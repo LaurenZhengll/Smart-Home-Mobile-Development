@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -11,10 +12,10 @@
         android:layout_height="0dp"
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
-        android:layout_marginTop="117dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="42dp"
         android:layout_marginRight="42dp"
-        android:layout_marginBottom="117dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/layout_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,27 +37,25 @@
             android:id="@+id/bgCircleBig"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:layout_marginTop="273dp"
-            android:layout_marginBottom="54dp"
             android:alpha="0.1"
             android:background="@drawable/circle"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/responseButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/messageTextSmall" />
 
         <TextView
             android:id="@+id/alertText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
             android:text="ALERT"
-            android:textStyle="bold"
             android:textColor="#FB2657"
             android:textSize="30sp"
-            android:layout_marginTop="31dp"
-            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/patientImage"
@@ -66,24 +65,28 @@
             android:layout_marginLeft="49dp"
             android:layout_marginTop="36dp"
             android:background="@drawable/circle"
-            app:layout_constraintEnd_toStartOf="@+id/emergencyCase"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/alertText" />
+            app:layout_constraintTop_toBottomOf="@id/alertText"
+            app:layout_constraintEnd_toStartOf="@id/bgCircleBig"
+            app:layout_constraintBottom_toTopOf="@id/responseButton"/>
 
         <TextView
             android:id="@+id/emergencyCase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginLeft="14dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="52dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
             android:text="FALL"
             android:textColor="#fb2657"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/detectedText"
-            app:layout_constraintStart_toEndOf="@id/patientImage"
-            app:layout_constraintTop_toBottomOf="@id/alertText" />
+            app:layout_constraintStart_toEndOf="@id/bgCircleBig"
+            app:layout_constraintTop_toBottomOf="@id/alertText"
+            app:layout_constraintBottom_toTopOf="@id/responseButton" />
 
         <TextView
             android:id="@+id/detectedText"
@@ -100,32 +103,35 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/emergencyCase"
-            app:layout_constraintTop_toBottomOf="@id/alertText" />
+            app:layout_constraintTop_toBottomOf="@id/alertText"
+            app:layout_constraintBottom_toTopOf="@id/responseButton"/>
 
         <TextView
             android:id="@+id/messageTextLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="DON'T WORRY"
-            android:textSize="30sp"
             android:textColor="#08D13E"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:layout_marginTop="43dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/patientImage"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@id/alertText"
+            app:layout_constraintBottom_toTopOf="@id/messageTextSmall"/>
 
         <TextView
             android:id="@+id/messageTextSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Our staff is reaching you"
+            android:textColor="#08D13E"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#08D13E"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/messageTextLarge"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintBottom_toTopOf="@id/bgCircleBig"/>
 
         <TextView
             android:id="@+id/responseText"
@@ -161,7 +167,7 @@
             android:layout_marginLeft="48dp"
             android:layout_marginEnd="48dp"
             android:layout_marginRight="48dp"
-            android:layout_marginBottom="34dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/alert_btn_red"
             android:text="IT'S A FAULT. I'M GOOD."
             android:textColor="#ffffff"

@@ -83,6 +83,7 @@
             android:layout_marginBottom="56dp"
             android:background="@drawable/circle"
             app:layout_constraintBottom_toTopOf="@id/contactStruc"
+            app:layout_constraintEnd_toStartOf="@id/ageText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,8 +92,8 @@
             android:id="@+id/nameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
             android:layout_marginTop="191dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
@@ -103,7 +104,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/ageText"
             app:layout_constraintEnd_toStartOf="@+id/patientName"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/patientImage"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -126,8 +127,8 @@
             android:id="@+id/ageText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
@@ -138,7 +139,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/addressText"
             app:layout_constraintEnd_toStartOf="@id/patientAge"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/patientImage"
             app:layout_constraintTop_toBottomOf="@id/nameText" />
 
         <TextView
@@ -161,8 +162,8 @@
             android:id="@+id/addressText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
@@ -173,7 +174,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/caseText"
             app:layout_constraintEnd_toStartOf="@id/patientAddress"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/patientImage"
             app:layout_constraintTop_toBottomOf="@id/ageText" />
 
         <TextView
@@ -196,8 +197,8 @@
             android:id="@+id/caseText"
             android:layout_width="wrap_content"
             android:layout_height="18dp"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
             android:layout_marginTop="3dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
@@ -208,7 +209,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/policeStruc"
             app:layout_constraintEnd_toStartOf="@id/emergencyCase"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/patientImage"
             app:layout_constraintTop_toBottomOf="@id/addressText" />
 
         <TextView

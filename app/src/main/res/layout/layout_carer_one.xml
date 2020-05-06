@@ -18,10 +18,8 @@
         android:background="@drawable/layout_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/bgCircleTwo"
@@ -73,10 +71,10 @@
             android:layout_marginTop="32dp"
             android:layout_marginRight="14dp"
             android:background="@drawable/circle"
+            app:layout_constraintBottom_toTopOf="@+id/bgCircleOne"
             app:layout_constraintEnd_toStartOf="@+id/emergencyCase"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/alertText"
-            />
+            app:layout_constraintTop_toBottomOf="@id/alertText" />
 
         <TextView
             android:id="@+id/emergencyCase"
@@ -87,30 +85,34 @@
             android:layout_marginTop="52dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
+            android:layout_marginBottom="14dp"
             android:text="FALL"
             android:textColor="#fb2657"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/bgCircleOne"
+            app:layout_constraintEnd_toStartOf="@id/detectedText"
             app:layout_constraintStart_toEndOf="@id/patientImage"
-            app:layout_constraintTop_toBottomOf="@id/alertText"
-            app:layout_constraintEnd_toStartOf="@id/detectedText"/>
+            app:layout_constraintTop_toBottomOf="@id/alertText" />
 
         <TextView
             android:id="@+id/detectedText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="56dp"
             android:layout_marginEnd="93dp"
             android:layout_marginRight="93dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="15dp"
             android:text="detected"
             android:textColor="#2699FB"
             android:textSize="16sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/bgCircleOne"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/alertText"
-            app:layout_constraintStart_toEndOf="@id/emergencyCase"/>
+            app:layout_constraintStart_toEndOf="@id/emergencyCase"
+            app:layout_constraintTop_toBottomOf="@id/alertText" />
 
         <TextView
             android:id="@+id/responseTextOne"
