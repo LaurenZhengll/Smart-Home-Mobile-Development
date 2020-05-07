@@ -94,19 +94,17 @@ public class LoginScreen extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                FirebaseUser user = auth.getCurrentUser();
+                                //updateUI(user);
                                 startActivity(new Intent(LoginScreen.this, MainActivity.class));
                                 finish();
                             }
                             else {
-                                FirebaseUser user = auth.getCurrentUser();
                                 Toast.makeText(LoginScreen.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
-                                if (user.getEmail() != null) {
-                                    inputPassword.getText().clear();
-                                } else {
-                                    inputEmail.getText().clear();
-                                    inputPassword.getText().clear();
-                                }
+
+                                //updateUI(null);
+                                inputPassword.getText().clear();
                             }
                         }
                     });
