@@ -34,6 +34,7 @@
     <string name="contact_pic">emergency contact icon</string>
     <string name="profile">Profile</string>
     <string name="edit_profile_icon">green icon to edit profile</string>
+    <string name="profileBg">profile page light blue background</string>
 
 
     <!--States to be selected from the spinner in signup page-->
