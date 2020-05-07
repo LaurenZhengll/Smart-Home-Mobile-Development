@@ -21,6 +21,7 @@ public class SignUpScreen extends AppCompatActivity {
     private EditText username;
     private EditText userPassword;
     private FirebaseAuth auth;
+    // this is for testing merge
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class SignUpScreen extends AppCompatActivity {
         Button signUp = findViewById(R.id.createbtn);
         username = findViewById(R.id.signupUsername);
         userPassword = findViewById(R.id.signupPassword);
+
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override

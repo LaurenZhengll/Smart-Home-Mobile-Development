@@ -47,7 +47,7 @@
             android:background="@drawable/edittext_bg"
             android:ems="10"
             android:hint=" Username"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.572"
@@ -62,7 +62,7 @@
             android:background="@drawable/edittext_bg"
             android:ems="10"
             android:hint="  Password"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.572"
@@ -72,6 +72,7 @@
 
         <Button
             android:id="@+id/login"
+            android:onClick="tryAuth"
             android:layout_width="280dp"
             android:layout_height="50dp"
             android:background="@drawable/edit_login_btn"
@@ -90,6 +91,7 @@
 
         <Button
             android:id="@+id/signup"
+            android:onClick="goToSignup"
             android:layout_width="280dp"
             android:layout_height="50dp"
             android:background="@drawable/edit_signup_btn"
