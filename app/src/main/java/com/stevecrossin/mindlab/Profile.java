@@ -1,6 +1,8 @@
 package com.stevecrossin.mindlab;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,15 +23,15 @@ public class Profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_profile);
 
         profileRecyclerView = findViewById(R.id.profileRecyclerView);
         // Create adapter passing in newsList
-        profileAdaptor = new ProfileAdaptor(profileList, this);
+        profileAdaptor = new ProfileAdaptor(profileList,Profile.this);
         // Attach the adapter to the recyclerview to populate items
         profileRecyclerView.setAdapter(profileAdaptor);
         // Set layout manager to position the items
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Profile.this, LinearLayoutManager.VERTICAL, false);
         profileRecyclerView.setLayoutManager(layoutManager);
 
         //Fill profileList
@@ -39,5 +41,6 @@ public class Profile extends AppCompatActivity {
             ProfileItem profileItem = new ProfileItem (i, profileQues, profileInfo);
             profileList.add(profileItem);
         }
+
     }
 }

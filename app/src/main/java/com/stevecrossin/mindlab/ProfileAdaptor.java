@@ -35,7 +35,7 @@ public class ProfileAdaptor extends RecyclerView.Adapter<ProfileAdaptor.ProfileV
     @Override
     public ProfileAdaptor.ProfileViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // create a new item view with empty textView by inflating
-        View itemView = LayoutInflater.from(context).inflate(R.layout.profile_item, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.profile_item, parent, false);
         return new ProfileAdaptor.ProfileViewHolder(itemView);
     }
 

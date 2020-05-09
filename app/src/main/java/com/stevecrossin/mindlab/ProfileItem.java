@@ -4,17 +4,16 @@ public class ProfileItem {
     private int id;
     private String profileQues, profileInfo;
 
-    //Constructor
     public ProfileItem(int id, String profileQues, String profileInfo) {
         this.id = id;
         this.profileQues = profileQues;
         this.profileInfo = profileInfo;
     }
 
-    //Setter & Getter Methods
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
