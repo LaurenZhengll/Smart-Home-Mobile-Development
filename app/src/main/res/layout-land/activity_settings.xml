@@ -11,12 +11,12 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="112dp"
-        android:layout_height="38dp"
+        android:layout_height="28dp"
         android:text="SETTINGS"
         android:textColor="#00bbff"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/settings_background"
@@ -151,7 +151,8 @@
         android:id="@+id/imageButton"
         android:layout_width="232dp"
         android:layout_height="47dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@id/deleteaccount"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_background"
@@ -239,6 +240,21 @@
             android:layout_centerInParent="true"
             app:srcCompat="@drawable/settings_language" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/deleteaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="400dp"
+        android:layout_marginLeft="400dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="400dp"
+        android:text="Delete Account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
