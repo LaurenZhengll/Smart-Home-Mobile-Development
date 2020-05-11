@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MinD Lab</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
@@ -10,6 +10,32 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="privacy"><u>Privacy Policy</u></string>
+
+    <!--String content for alert pages-->
+    <string name="alert_title">ALERT</string>
+    <string name="case_fall">FALL</string>
+    <string name="detect_text">detected</string>
+    <string name="response_text_one">Response in:</string>
+    <string name="timer_text_one">09:47</string>
+    <string name="response_text_two">Auto response in:</string>
+    <string name="timer_text_two">00:07</string>
+    <string name="response_button">RESPONSE</string>
+    <string name="name_text">Name:</string>
+    <string name="patient_name">Fiona Lau</string>
+    <string name="age_text">Age:</string>
+    <string name="patient_age">74</string>
+    <string name="address_text">Address:</string>
+    <string name="patient_address">234 Burwood Hwy</string>
+    <string name="case_text">Emergency:</string>
+    <string name="contact_case">CONTACT</string>
+    <string name="ambulance_case">AMBULANCE</string>
+    <string name="police_case">POLICE</string>
+    <string name="data_case">LIVE DATA</string>
+    <string name="clear_button">CLEAR</string>
+    <string name="message_text_one" tools:ignore="StringEscaping">DON'T WORRY</string>
+    <string name="message_text_two">Our staff is reaching you</string>
+    <string name="response_text_three">Response needed in:</string>
+    <string name="clear_button_two" tools:ignore="StringEscaping">IT'S A FAULT. I'M GOOD.</string>
 
     <!--States to be selected from the spinner in signup page-->
     <string name="state_prompt">State</string>
