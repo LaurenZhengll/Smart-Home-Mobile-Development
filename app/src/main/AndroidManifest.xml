@@ -19,6 +19,8 @@
 
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpScreen" />
+        <activity android:name=".PatientDetail" />
+        <activity android:name=".Profile" />
     </application>
 
 </manifest>
