@@ -120,6 +120,7 @@
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:onClick="bypassLogin"
             app:backgroundTint="#00BBFF"
             app:layout_constraintTop_toBottomOf="@id/privacyPolicy"
             app:layout_constraintStart_toStartOf="@id/homeBackground"
