@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F9FF">
+
+    <!--Image button to go back to the login page-->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="112dp"
+        android:layout_height="38dp"
+        android:text="SETTINGS"
+        android:textColor="#00bbff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/settings_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/settings_background"
+        android:layout_width="372dp"
+        android:layout_height="299dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/settings_background" />
+
+
+    <TextView
+        android:id="@+id/failsafe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Fail Safe"
+        android:textColor="#00BBFF"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/vibrate"
+        app:layout_constraintEnd_toStartOf="@id/toggleButton"
+        app:layout_constraintStart_toEndOf="@id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@id/settings_background" />
+
+    <TextView
+        android:id="@+id/vibrate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="10dp"
+        android:text="Vibrate"
+        android:textColor="#00BBFF"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/fontsize"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton2"
+        app:layout_constraintStart_toEndOf="@id/vibrateEclipse"
+        app:layout_constraintTop_toBottomOf="@+id/failsafe"
+        app:layout_constraintVertical_bias="0.377" />
+
+    <TextView
+        android:id="@+id/fontsize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Font Size"
+        android:textColor="#00BBFF"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/language"
+        app:layout_constraintEnd_toStartOf="@+id/spinner2"
+        app:layout_constraintStart_toEndOf="@+id/sizeEclipse"
+        app:layout_constraintTop_toBottomOf="@id/vibrate" />
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Language"
+        android:textColor="#00BBFF"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_background"
+        app:layout_constraintEnd_toStartOf="@+id/spinner"
+        app:layout_constraintStart_toEndOf="@+id/languageEclipse"
+        app:layout_constraintTop_toBottomOf="@id/fontsize" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="117dp"
+        android:layout_height="52dp"
+        android:entries="@array/language_arrays"
+        app:layout_constraintStart_toEndOf="@id/language"
+        app:layout_constraintTop_toBottomOf="@id/spinner2"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_background"
+        app:layout_constraintEnd_toEndOf="@+id/settings_background"
+        />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="117dp"
+        android:layout_height="52dp"
+        android:entries="@array/font_arrays"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton2"
+        app:layout_constraintStart_toEndOf="@id/fontsize"
+        app:layout_constraintEnd_toEndOf="@+id/settings_background"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintBottom_toTopOf="@id/spinner"
+ />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@id/toggleButton2"
+        app:layout_constraintEnd_toEndOf="@+id/settings_background"
+        app:layout_constraintStart_toEndOf="@+id/failsafe"
+        app:layout_constraintTop_toTopOf="@+id/settings_background" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@id/spinner2"
+        app:layout_constraintEnd_toEndOf="@+id/settings_background"
+        app:layout_constraintStart_toEndOf="@id/vibrate"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="232dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_background"
+        app:srcCompat="@drawable/log_out" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/settings_eclipse"
+        app:layout_constraintBottom_toTopOf="@id/vibrateEclipse"
+        app:layout_constraintEnd_toStartOf="@+id/failsafe"
+        app:layout_constraintStart_toStartOf="@+id/settings_background"
+        app:layout_constraintTop_toTopOf="@+id/settings_background">
+
+        <ImageView
+            android:id="@+id/warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/settings_warning" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/vibrateEclipse"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/settings_eclipse"
+        app:layout_constraintBottom_toTopOf="@id/sizeEclipse"
+        app:layout_constraintEnd_toStartOf="@+id/vibrate"
+        app:layout_constraintStart_toStartOf="@+id/settings_background"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <ImageView
+            android:id="@+id/vibrateIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/settings_vibrate" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sizeEclipse"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/settings_eclipse"
+        app:layout_constraintBottom_toTopOf="@id/languageEclipse"
+        app:layout_constraintEnd_toStartOf="@id/fontsize"
+        app:layout_constraintStart_toStartOf="@id/settings_background"
+        app:layout_constraintTop_toBottomOf="@id/vibrateEclipse">
+
+        <ImageView
+            android:id="@+id/sizeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/settings_font" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/languageEclipse"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/settings_eclipse"
+        app:layout_constraintBottom_toBottomOf="@id/settings_background"
+        app:layout_constraintEnd_toStartOf="@+id/language"
+        app:layout_constraintStart_toStartOf="@id/settings_background"
+        app:layout_constraintTop_toBottomOf="@+id/sizeEclipse">
+
+        <ImageView
+            android:id="@+id/languageIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/settings_language" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/deleteaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Account"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
