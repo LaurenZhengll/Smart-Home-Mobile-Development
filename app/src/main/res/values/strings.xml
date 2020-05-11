@@ -13,6 +13,15 @@
 
     <!--States to be selected from the spinner in signup page-->
     <string name="state_prompt">State</string>
+    <string name="unique_id">UNIQUE ID:</string>
+    <string name="initial_id">001</string>
+    <string name="addButtonText">Add</string>
+    <string name="initial_name">Name</string>
+    <string name="device_name">Device Name</string>
+    <string name="location">Location</string>
+    <string name="device_type">Device Type</string>
+    <string name="status">Status</string>
+    <string name="priority">Priority</string>
     <string-array name="state_arrays">
         <item>"State"</item>
         <item>VIC</item>
