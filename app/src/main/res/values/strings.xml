@@ -14,7 +14,7 @@
     <!--String content for alert pages-->
     <string name="alert_title">ALERT</string>
     <string name="case_fall">FALL</string>
-    <string name="detect_text">detected</string>
+    <string name="detect_text">detect</string>
     <string name="response_text_one">Response in:</string>
     <string name="timer_text_one">09:47</string>
     <string name="response_text_two">Auto response in:</string>
@@ -32,10 +32,10 @@
     <string name="police_case">POLICE</string>
     <string name="data_case">LIVE DATA</string>
     <string name="clear_button">CLEAR</string>
-    <string name="message_text_one" tools:ignore="StringEscaping">DON'T WORRY</string>
+    <string name="message_text_one">DON\'T WORRY</string>
     <string name="message_text_two">Our staff is reaching you</string>
     <string name="response_text_three">Response needed in:</string>
-    <string name="clear_button_two" tools:ignore="StringEscaping">IT'S A FAULT. I'M GOOD.</string>
+    <string name="clear_button_two">IT\'S A FAULT. I\'M GOOD.</string>
 
     <!--States to be selected from the spinner in signup page-->
     <string name="state_prompt">State</string>
