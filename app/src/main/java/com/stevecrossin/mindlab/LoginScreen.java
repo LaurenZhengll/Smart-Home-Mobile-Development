@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class LoginScreen extends AppCompatActivity {
     public EditText inputEmail, inputPassword;
@@ -28,29 +29,15 @@ public class LoginScreen extends AppCompatActivity {
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = auth.getCurrentUser();
 
-        /*if (currentUser.isLoggedIn = true)
+        if (currentUser != null)
         {
             startActivity(new Intent(LoginScreen.this, MainActivity.class));
             finish();
         }
         else return;
-    }*/
     }
 
- /*   private void updateUI (FirebaseUser user){
-        if (user != null) {
-            // This code is redundant as not n
-            //inputEmail.setText(getString(R.string.google_status_fmt, user.getEmail()));
-            //inputPassword.setText(getString(R.string.firebase_status_fmt, user.getUid()));
 
-            findViewById(R.id.signup).setVisibility(View.GONE);
-        } else {
-            inputEmail.setText(null);
-            inputPassword.setText(null);
-
-            findViewById(R.id.signup).setVisibility(View.VISIBLE);
-        }
-    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +47,13 @@ public class LoginScreen extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
     }
 
-    public void onStop() {
-        super.onStop();
-        FirebaseAuth.getInstance().signOut();
-    }
+/*
+    This is the sign-out function which will be included in the settings page.
+*/
+//    public void onStop() {
+//        super.onStop();
+//        FirebaseAuth.getInstance().signOut();
+//    }
 
     /**
      * Authentication task. This method is invoke through onClick of login button in activity_login.
@@ -100,6 +90,7 @@ public class LoginScreen extends AppCompatActivity {
             cancel = true;
         }
 
+
         if (cancel) {
             focusView.requestFocus();
         }
@@ -110,15 +101,12 @@ public class LoginScreen extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = auth.getCurrentUser();
-                                //updateUI(user);
                                 startActivity(new Intent(LoginScreen.this, MainActivity.class));
                                 finish();
                             }
                             else {
                                 Toast.makeText(LoginScreen.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
-
-                                //updateUI(null);
                                 inputPassword.getText().clear();
                             }
                         }
