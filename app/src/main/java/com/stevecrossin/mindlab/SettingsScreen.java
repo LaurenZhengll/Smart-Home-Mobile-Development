@@ -33,19 +33,20 @@ public class SettingsScreen extends AppCompatActivity {
     }
 
     public void deleteUser(View view) {
+            user.delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(SettingsScreen.this, "User deleted.",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            FirebaseAuth.getInstance().signOut();
             Intent intent = new Intent(this, LoginScreen.class);
             startActivity(intent);
 
-            user.delete()
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(SettingsScreen.this, "User deleted.",Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
     }
 
 }
