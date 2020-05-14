@@ -16,7 +16,7 @@
     <string name="unique_id">UNIQUE ID:</string>
     <string name="initial_id">001</string>
     <string name="addButtonText">Add</string>
-    <string name="initial_name">Name</string>
+    <string name="initial_name"></string>
     <string name="device_name">Device Name</string>
     <string name="location">Location</string>
     <string name="device_type">Device Type</string>
@@ -35,6 +35,7 @@
 
     <!--arrays using in Add New Device layout-->
     <string-array name="location">
+        <item />
         <item>Kitchen</item>
         <item>Living Room</item>
         <item>Study</item>
@@ -44,18 +45,22 @@
     </string-array>
 
     <string-array name="device_Type">
+        <item />
         <item>Device Camera</item>
         <item>Sensor</item>
         <item>Others</item>
     </string-array>
 
     <string-array name="status">
+        <item />
         <item>Operating</item>
+        <item>Off Line</item>
         <item>Available</item>
         <item>Unavailable</item>
     </string-array>
 
     <string-array name="priority">
+        <item />
         <item>HIGH</item>
         <item>Medium</item>
         <item>Low</item>

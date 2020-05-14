@@ -7,274 +7,265 @@
     android:orientation="vertical"
     tools:context=".AddNewDevice">
 
-    <TextView
-        android:id="@+id/uniqueIDBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="180dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:layout_marginBottom="15dp"
-        android:text="@string/unique_id"
-        android:textColor="#2283FA"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textBg1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/uniqueIDTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginRight="120dp"
+    <LinearLayout
+        android:id="@+id/uniqueIDLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/deviceNameLayout"
+        app:layout_constraintLeft_toLeftOf="@id/deviceNameLayout"
+        app:layout_constraintRight_toRightOf="@id/deviceNameLayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/uniqueIDBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="160dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="10"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/unique_id"
+            android:textColor="#2283FA"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/uniqueIDTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="3"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/initial_id"
+            android:textColor="#2283FA"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deviceNameLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/locationLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/uniqueIDLayout">
+
+        <TextView
+            android:id="@+id/deviceNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="11"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/device_name"
+            android:textColor="#2283FA"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/deviceNameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="9"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:text="@string/initial_name"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/locationLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/deviceTypeLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deviceNameLayout">
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="8"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/location"
+            android:textColor="#2283FA"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/locationSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:entries="@array/location"
+            android:gravity="end"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deviceTypeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/statusLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationLayout">
+
+        <TextView
+            android:id="@+id/deviceTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="11"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/device_type"
+            android:textColor="#2283FA"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/deviceTypeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:entries="@array/device_Type"
+            android:gravity="end"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/priorityLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deviceTypeLayout">
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="4"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/status"
+            android:textColor="#2283FA"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/statusSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="14"
+            android:entries="@array/status"
+            android:gravity="end"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/priorityLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="32dp"
         android:layout_marginBottom="30dp"
-        android:text="@string/initial_id"
-        android:textColor="#2283FA"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textBg1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/uniqueIDBox"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/addButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusLayout">
+
+        <TextView
+            android:id="@+id/priorityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="4"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="@string/priority"
+            android:textColor="#2283FA"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/prioritySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:entries="@array/priority"
+            android:gravity="end"
+            android:textAlignment="viewEnd" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/addButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="8dp"
+        android:autoSizeTextType="uniform"
         android:background="@drawable/edit_login_btn"
+        android:padding="8dp"
         android:text="@string/addButtonText"
         android:textAllCaps="false"
         android:textColor="#fff"
-        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg5" />
-
-    <TextView
-        android:id="@+id/textBg1"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/border"
-        app:layout_constraintBottom_toTopOf="@+id/textBg2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uniqueIDBox" />
-
-    <EditText
-        android:id="@+id/deviceNameEditText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
-        android:background="@null"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/initial_name"
-        app:layout_constraintBottom_toBottomOf="@id/textBg1"
-        app:layout_constraintEnd_toStartOf="@id/deviceNameTextView"
-        app:layout_constraintStart_toStartOf="@id/textBg1"
-        app:layout_constraintTop_toTopOf="@id/textBg1" />
-
-    <TextView
-        android:id="@+id/deviceNameTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_vertical|right"
-        android:text="@string/device_name"
-        android:textColor="#2283FA"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/textBg1"
-        app:layout_constraintEnd_toEndOf="@id/textBg1"
-        app:layout_constraintStart_toEndOf="@id/deviceNameEditText"
-        app:layout_constraintTop_toTopOf="@id/textBg1"
-        tools:ignore="RtlHardcoded" />
-
-    <TextView
-        android:id="@+id/textBg2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/border"
-        app:layout_constraintBottom_toTopOf="@+id/textBg3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg1" />
-
-    <Spinner
-        android:id="@+id/locationSpinner"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:entries="@array/location"
-        app:layout_constraintBottom_toBottomOf="@id/textBg2"
-        app:layout_constraintEnd_toStartOf="@id/locationTextView"
-        app:layout_constraintStart_toStartOf="@id/textBg2"
-        app:layout_constraintTop_toTopOf="@id/textBg2" />
-
-    <TextView
-        android:id="@+id/locationTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_vertical|right"
-        android:text="@string/location"
-        android:textColor="#2283FA"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/textBg2"
-        app:layout_constraintEnd_toEndOf="@id/textBg2"
-        app:layout_constraintStart_toEndOf="@id/locationSpinner"
-        app:layout_constraintTop_toTopOf="@id/textBg2"
-        tools:ignore="RtlHardcoded" />
-
-    <TextView
-        android:id="@+id/textBg3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/border"
-        app:layout_constraintBottom_toTopOf="@+id/textBg4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg2" />
-
-    <Spinner
-        android:id="@+id/deviceTypeSpinner"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:entries="@array/device_Type"
-        app:layout_constraintBottom_toBottomOf="@id/textBg3"
-        app:layout_constraintEnd_toStartOf="@id/deviceNameTextView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@id/textBg3"
-        app:layout_constraintTop_toTopOf="@id/textBg3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/deviceTypeTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_vertical|right"
-        android:text="@string/device_type"
-        android:textColor="#2283FA"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/textBg3"
-        app:layout_constraintEnd_toEndOf="@id/textBg3"
-        app:layout_constraintStart_toEndOf="@id/deviceTypeSpinner"
-        app:layout_constraintTop_toTopOf="@id/textBg3"
-        tools:ignore="RtlHardcoded" />
-
-    <TextView
-        android:id="@+id/textBg4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/border"
-        app:layout_constraintBottom_toTopOf="@+id/textBg5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg3" />
-
-    <Spinner
-        android:id="@+id/statusSpinner"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:entries="@array/status"
-        app:layout_constraintBottom_toBottomOf="@id/textBg4"
-        app:layout_constraintEnd_toStartOf="@id/statusTextView"
-        app:layout_constraintStart_toStartOf="@id/textBg4"
-        app:layout_constraintTop_toTopOf="@id/textBg4" />
-
-    <TextView
-        android:id="@+id/statusTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_vertical|right"
-        android:text="@string/status"
-        android:textColor="#2283FA"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/textBg4"
-        app:layout_constraintEnd_toEndOf="@id/textBg4"
-        app:layout_constraintStart_toEndOf="@id/statusSpinner"
-        app:layout_constraintTop_toTopOf="@id/textBg4"
-        tools:ignore="RtlHardcoded" />
-
-    <TextView
-        android:id="@+id/textBg5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/border"
-        app:layout_constraintBottom_toTopOf="@+id/addButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBg4" />
-
-    <Spinner
-        android:id="@+id/prioritySpinner"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:entries="@array/priority"
-        app:layout_constraintBottom_toBottomOf="@id/textBg5"
-        app:layout_constraintEnd_toStartOf="@id/priorityTextView"
-        app:layout_constraintStart_toStartOf="@id/textBg5"
-        app:layout_constraintTop_toTopOf="@id/textBg5" />
-
-    <TextView
-        android:id="@+id/priorityTextView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:gravity="center_vertical|right"
-        android:text="@string/priority"
-        android:textColor="#2283FA"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/textBg5"
-        app:layout_constraintEnd_toEndOf="@id/textBg5"
-        app:layout_constraintStart_toEndOf="@id/prioritySpinner"
-        app:layout_constraintTop_toTopOf="@id/textBg5"
-        tools:ignore="RtlHardcoded" />
+        app:layout_constraintTop_toBottomOf="@id/priorityLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
