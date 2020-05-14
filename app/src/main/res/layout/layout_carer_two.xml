@@ -81,7 +81,7 @@
             android:textStyle="bold"
             app:autoSizeMaxTextSize="60sp"
             app:autoSizeMinTextSize="20sp"
-            app:autoSizeStepGranularity="5dpsp"
+            app:autoSizeStepGranularity="5sp"
             app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toTopOf="@+id/patientName"
             app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
             android:layout_marginTop="180dp"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginBottom="36dp"
             android:background="@drawable/circle"
             app:layout_constraintBottom_toTopOf="@+id/contactStruc"
             app:layout_constraintEnd_toStartOf="@id/bgSmall"
@@ -119,9 +119,9 @@
             android:text="@string/name_text"
             android:textColor="#2699FB"
             android:textStyle="bold"
-            app:autoSizeMaxTextSize="52sp"
+            app:autoSizeMaxTextSize="32sp"
             app:autoSizeMinTextSize="12sp"
-            app:autoSizeStepGranularity="10sp"
+            app:autoSizeStepGranularity="5sp"
             app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toTopOf="@id/ageText"
             app:layout_constraintEnd_toStartOf="@+id/patientName"
@@ -165,7 +165,7 @@
             android:textStyle="bold"
             app:autoSizeMaxTextSize="32sp"
             app:autoSizeMinTextSize="12sp"
-            app:autoSizeStepGranularity="10sp"
+            app:autoSizeStepGranularity="5sp"
             app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toTopOf="@id/addressText"
             app:layout_constraintEnd_toStartOf="@id/patientAge"
@@ -209,7 +209,7 @@
             android:textStyle="bold"
             app:autoSizeMaxTextSize="32sp"
             app:autoSizeMinTextSize="12sp"
-            app:autoSizeStepGranularity="10sp"
+            app:autoSizeStepGranularity="5sp"
             app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toTopOf="@id/caseText"
             app:layout_constraintEnd_toStartOf="@id/patientAddress"
@@ -246,16 +246,16 @@
             android:layout_marginTop="3dp"
             android:layout_marginEnd="2dp"
             android:layout_marginRight="2dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="160dp"
             android:gravity="start"
             android:text="@string/case_text"
             android:textColor="#2699FB"
             android:textStyle="bold"
             app:autoSizeMaxTextSize="32sp"
             app:autoSizeMinTextSize="12sp"
-            app:autoSizeStepGranularity="10sp"
+            app:autoSizeStepGranularity="5sp"
             app:autoSizeTextType="uniform"
-            app:layout_constraintBottom_toTopOf="@id/policeStruc"
+            app:layout_constraintBottom_toTopOf="@+id/clearButton"
             app:layout_constraintEnd_toStartOf="@id/emergencyCase"
             app:layout_constraintStart_toEndOf="@id/patientImage"
             app:layout_constraintTop_toBottomOf="@id/addressText" />
@@ -267,7 +267,7 @@
             android:layout_marginStart="2dp"
             android:layout_marginLeft="2dp"
             android:layout_marginTop="1dp"
-            android:layout_marginBottom="36dp"
+            android:layout_marginBottom="158dp"
             android:gravity="start"
             android:text="@string/case_fall"
             android:textColor="#FB2657"
@@ -276,192 +276,239 @@
             app:autoSizeMinTextSize="13sp"
             app:autoSizeStepGranularity="10sp"
             app:autoSizeTextType="uniform"
-            app:layout_constraintBottom_toTopOf="@id/policeStruc"
+            app:layout_constraintBottom_toTopOf="@+id/clearButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/caseText"
             app:layout_constraintTop_toBottomOf="@id/patientAddress" />
 
-        <LinearLayout
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/contactStruc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
             android:layout_marginStart="11dp"
             android:layout_marginLeft="11dp"
-            android:layout_marginTop="307dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="27dp"
             android:layout_marginRight="27dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="2dp"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintBottom_toTopOf="@id/contactText"
             app:layout_constraintEnd_toStartOf="@+id/ambulanceStruc"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/caseText">
 
-            <RelativeLayout
-                android:layout_width="56dp"
-                android:layout_height="56dp">
 
-                <ImageView
-                    android:id="@+id/contact"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/phone" />
-
-                <Button
-                    android:id="@+id/contactButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/hollow_circle"
-                    android:gravity="center|bottom" />
-            </RelativeLayout>
-
-            <TextView
+            <ImageView
+                android:id="@+id/contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="@string/contact_case"
-                android:textColor="#2699FB"
-                android:textSize="8sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+                android:layout_centerInParent="true"
+                android:src="@drawable/phone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+            <Button
+                android:id="@+id/contactButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/hollow_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/contactText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:text="@string/contact_case"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="38sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintEnd_toStartOf="@id/ambulanceText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contactStruc" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/ambulanceStruc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="307dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="27dp"
             android:layout_marginRight="27dp"
-            android:layout_marginBottom="60dp"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@id/ambulanceText"
             app:layout_constraintEnd_toStartOf="@+id/policeStruc"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/contactStruc"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/caseText">
 
-            <RelativeLayout
-                android:layout_width="56dp"
-                android:layout_height="56dp">
 
-                <ImageView
-                    android:id="@+id/ambulance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ambulance" />
-
-                <Button
-                    android:id="@+id/ambulanceButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/hollow_circle"
-                    android:gravity="center|bottom" />
-            </RelativeLayout>
-
-            <TextView
+            <ImageView
+                android:id="@+id/ambulance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="@string/ambulance_case"
-                android:textColor="#2699FB"
-                android:textSize="8sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+                android:layout_centerInParent="true"
+                android:src="@drawable/ambulance"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+            <Button
+                android:id="@+id/ambulanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/hollow_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/ambulanceText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:text="@string/ambulance_case"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="38sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintEnd_toStartOf="@id/policeText"
+            app:layout_constraintStart_toEndOf="@id/contactText"
+            app:layout_constraintTop_toBottomOf="@id/ambulanceStruc" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/policeStruc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="307dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="27dp"
             android:layout_marginRight="27dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="2dp"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintBottom_toTopOf="@id/policeText"
             app:layout_constraintEnd_toStartOf="@+id/dataSturc"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ambulanceStruc"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/caseText">
 
-            <RelativeLayout
-                android:layout_width="56dp"
-                android:layout_height="56dp">
 
-                <ImageView
-                    android:id="@+id/police"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/police" />
-
-                <Button
-                    android:id="@+id/policeButton"
-                    android:layout_width="52dp"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/hollow_circle"
-                    android:gravity="center|bottom" />
-            </RelativeLayout>
-
-            <TextView
+            <ImageView
+                android:id="@+id/police"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="@string/police_case"
-                android:textColor="#2699FB"
-                android:textSize="8sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+                android:layout_centerInParent="true"
+                android:src="@drawable/police"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+            <Button
+                android:id="@+id/policeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/hollow_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/policeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:text="@string/police_case"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="38sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintEnd_toStartOf="@id/dataText"
+            app:layout_constraintStart_toEndOf="@id/ambulanceText"
+            app:layout_constraintTop_toBottomOf="@id/policeStruc" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/dataSturc"
             android:layout_width="56dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="307dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="11dp"
             android:layout_marginRight="11dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="2dp"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintBottom_toTopOf="@id/dataText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/policeStruc"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toBottomOf="@id/caseText">
 
-            <RelativeLayout
-                android:layout_width="56dp"
-                android:layout_height="56dp">
-
-                <ImageView
-                    android:id="@+id/livedata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/sections" />
-
-                <Button
-                    android:id="@+id/liveDataButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/hollow_circle"
-                    android:gravity="center|bottom" />
-            </RelativeLayout>
-
-            <TextView
+            <ImageView
+                android:id="@+id/livedata"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7dp"
-                android:text="@string/data_case"
-                android:textColor="#2699FB"
-                android:textSize="8sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+                android:layout_centerInParent="true"
+                android:src="@drawable/sections"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/liveDataButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/hollow_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/dataText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:text="@string/data_case"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="38sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/policeText"
+            app:layout_constraintTop_toBottomOf="@id/dataSturc" />
 
 
         <Button
