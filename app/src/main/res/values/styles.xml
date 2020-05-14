@@ -7,4 +7,9 @@
         <item name="colorAccent">@color/teal200</item>
     </style>
 
+    <style name="button" parent="TextAppearance.AppCompat">
+        <item name="android:background">#fc3fff</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
 </resources>

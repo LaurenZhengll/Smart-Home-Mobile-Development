@@ -21,6 +21,7 @@
         <activity android:name=".SignUpScreen" />
         <activity android:name=".PatientDetail" />
         <activity android:name=".Profile" />
+        <activity android:name=".SettingsScreen"/>
     </application>
 
 </manifest>

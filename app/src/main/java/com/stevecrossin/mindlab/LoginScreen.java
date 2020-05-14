@@ -18,6 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import android.view.View;
+
 
 public class LoginScreen extends AppCompatActivity {
     public EditText inputEmail, inputPassword;
@@ -64,6 +66,12 @@ public class LoginScreen extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         loginBtn = findViewById(R.id.login);
     }
+
+    /*public void bypassLogin(View view) {
+        Intent intent = new Intent(this, SettingsScreen.class);
+        startActivity(intent);
+    }
+*/
 
     public void onStop() {
         super.onStop();
@@ -171,4 +179,7 @@ public class LoginScreen extends AppCompatActivity {
                }
             }
         */
+
+
+
 

@@ -9,7 +9,7 @@
         <ImageView
             android:id="@+id/titlebg"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="100dp"
             app:layout_constraintBottom_toTopOf="@id/homeBackground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
             android:text="SMART HOME"
             android:textSize="30sp"
             android:textColor="#ffffff"
-            android:layout_marginTop="62dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintTop_toTopOf="@id/titlebg"
             app:layout_constraintStart_toStartOf="@id/titlebg"
             app:layout_constraintEnd_toEndOf="@id/titlebg"
@@ -55,68 +55,71 @@
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="280dp"
+            android:layout_width="190dp"
             android:layout_height="50dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:hint=" Username"
-            android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="  Username"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@id/password"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/titlebg"
-            app:layout_constraintBottom_toTopOf="@id/password"/>
+            app:layout_constraintTop_toTopOf="@id/homeBackground" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="280dp"
+            android:layout_width="190dp"
             android:layout_height="50dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:hint="Password"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:hint="  Password"
             android:inputType="textPersonName|textPassword|numberPassword"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/username"
-            />
+            app:layout_constraintStart_toEndOf="@id/username"
+            app:layout_constraintTop_toTopOf="@id/homeBackground" />
 
         <CheckBox
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="200dp"
             android:text="I Agree"
+            android:textColor="#00BBFF"
             android:textSize="15sp"
             android:textStyle="bold"
-            android:textColor="#00BBFF"
-            app:layout_constraintTop_toBottomOf="@id/password"
-            app:layout_constraintStart_toStartOf="@id/homeBackground"
             app:layout_constraintEnd_toEndOf="@id/homeBackground"
-            android:layout_marginRight="200dp"
-            android:layout_marginTop="20dp"/>
+            app:layout_constraintBottom_toTopOf="@id/login"
+            app:layout_constraintStart_toStartOf="@id/homeBackground"
+            app:layout_constraintTop_toBottomOf="@id/password" />
 
 
         <TextView
             android:id="@+id/privacyPolicy"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="22dp"
             android:text="@string/privacy"
             android:textColor="#FF6600"
             android:textSize="11sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@id/homeBackground"
+            app:layout_constraintBottom_toTopOf="@id/login"
             app:layout_constraintEnd_toEndOf="@id/homeBackground"
-            app:layout_constraintTop_toBottomOf="@id/checkBox"
-            android:layout_marginTop="1dp"
-            android:layout_marginRight="200dp"/>
+            app:layout_constraintStart_toEndOf="@id/checkBox"
+            app:layout_constraintTop_toBottomOf="@id/password" />
 
         <Button
             android:id="@+id/login"
-            android:onClick="tryAuth"
             android:layout_width="280dp"
             android:layout_height="50dp"
+            android:layout_marginTop="280dp"
+            android:layout_marginBottom="21dp"
             android:background="@drawable/edit_login_btn"
             android:text="Login"
             android:textAllCaps="false"
@@ -124,20 +127,19 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:backgroundTint="#00BBFF"
-            app:layout_constraintTop_toBottomOf="@id/privacyPolicy"
-            app:layout_constraintStart_toStartOf="@id/homeBackground"
-            app:layout_constraintEnd_toEndOf="@id/homeBackground"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/signup"
-            android:layout_marginBottom="21dp"
-            android:layout_marginTop="72dp"/>
+            app:layout_constraintEnd_toEndOf="@id/homeBackground"
+            app:layout_constraintStart_toStartOf="@id/homeBackground"
+            />
 
         <Button
             android:id="@+id/signup"
-            android:onClick="goToSignup"
             android:layout_width="280dp"
             android:layout_height="50dp"
             android:background="@drawable/edit_signup_btn"
             android:text="Sign up"
+            android:layout_marginTop="16dp"
             android:textAllCaps="false"
             android:textColor="#00BBFF"
             android:textSize="18sp"

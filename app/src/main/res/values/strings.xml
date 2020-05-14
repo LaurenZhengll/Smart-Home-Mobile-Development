@@ -82,4 +82,28 @@
         <item>Medium</item>
         <item>Low</item>
     </string-array>
+
+    <!--Font size to be selected from the spinner in Settings page-->
+    <string name="font_prompt">Medium</string>
+    <string-array name="font_arrays">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    <!--Languages to be selected from the spinner in Settings page-->
+    <string name="language_prompt">English</string>
+    <string name="settingsTitle">SETTINGS</string>
+    <string name="labelsettings">Settings</string>
+    <string name="txtVibrate">Vibrate</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="font_size">Font Size</string>
+    <string name="language">Language</string>
+    <string name="logout">Log Out</string>
+    <string name="delete_account">Delete Account</string>
+    <string-array name="language_arrays">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Spanish</item>
+    </string-array>
 </resources>
