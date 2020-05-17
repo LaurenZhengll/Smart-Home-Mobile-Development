@@ -35,4 +35,15 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
             return;}
     }
+
+    public void signout(View view) {
+        if (user != null) {
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(this, LoginScreen.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
+            return;}
+    }
 }
