@@ -1,6 +1,346 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/screenTitle"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:contentDescription="@string/descTitle"
+        android:foregroundGravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@id/profilePic"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toEndOf="@id/profileIcon"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        app:srcCompat="@drawable/dashboard"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="15dp" />
+
+    <ImageView
+        android:contentDescription="@string/descProPic"
+        android:id="@+id/profilePic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginRight="160dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/screenTitle"
+        app:srcCompat="@drawable/profile_picture" />
+
+    <ImageView
+        android:contentDescription="@string/descDashboardPanel"
+        android:id="@+id/dashboardPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusText"
+        app:srcCompat="@drawable/dasboard_border" />
+
+    <TextView
+        android:id="@+id/patientName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:gravity="center"
+        android:text="@string/patientName"
+        android:textColor="#0B0808"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profilePic"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <TextView
+        android:id="@+id/ageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/ageTextView"
+        android:textColor="#0E0C0C"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patientName"
+        tools:layout_editor_absoluteY="233dp" />
+
+    <TextView
+        android:id="@+id/ageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="170dp"
+        android:text="@string/ageValue"
+        android:textColor="#0C0909"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ageText"
+        app:layout_constraintTop_toBottomOf="@id/patientName"
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="237dp" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/statusTextView"
+        android:textColor="#131010"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ageText"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="265dp" />
+
+    <TextView
+        android:id="@+id/statusValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="150dp"
+        android:gravity="center"
+        android:text="@string/statusValue"
+        android:textColor="#64DC28"
+        android:textSize="18sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/statusText"
+        app:layout_constraintTop_toBottomOf="@id/ageValue"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="268dp" />
+
+    <ImageView
+        android:contentDescription="@string/descSteps"
+        android:id="@+id/stepIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="@id/dashboardPanel"
+        app:layout_constraintTop_toTopOf="@id/dashboardPanel"
+        app:srcCompat="@drawable/steps_icon"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+    <ImageView
+        android:contentDescription="@string/descHeartRate"
+        android:id="@+id/heartRateIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/dashboardPanel"
+        app:layout_constraintTop_toBottomOf="@id/stepIcon"
+        app:srcCompat="@drawable/hr_icon"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <ImageView
+        android:contentDescription="@string/descBP"
+        android:id="@+id/pressureIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="@id/dashboardPanel"
+        app:layout_constraintStart_toStartOf="@id/dashboardPanel"
+        app:layout_constraintTop_toBottomOf="@id/heartRateIcon"
+        app:srcCompat="@drawable/bp_icon"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="445dp" />
+
+    <TextView
+        android:id="@+id/stepsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:text="@string/stepCountDisplay"
+        android:textColor="#2699FB"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/stepIcon"
+        app:layout_constraintTop_toTopOf="@id/dashboardPanel"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="360dp" />
+
+    <TextView
+        android:id="@+id/heartRateValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/heartRateDisplay"
+        android:textColor="#2699FB"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/pressureValue"
+        app:layout_constraintEnd_toStartOf="@id/unitOfHeartRate"
+        app:layout_constraintStart_toEndOf="@id/heartRateIcon"
+        app:layout_constraintTop_toBottomOf="@id/stepsValue"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <TextView
+        android:id="@+id/pressureValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="55dp"
+        android:gravity="center"
+        android:text="@string/pressureDisplay"
+        android:textColor="#2699FB"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/dashboardPanel"
+        app:layout_constraintStart_toEndOf="@id/pressureIcon"
+        app:layout_constraintTop_toBottomOf="@id/heartRateValue"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="469dp" />
+
+    <TextView
+        android:id="@+id/unitOfSteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:text="@string/stepUnit"
+        android:textColor="#050404"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/dashboardPanel"
+        app:layout_constraintTop_toTopOf="@id/dashboardPanel" />
+
+    <TextView
+        android:id="@+id/unitOfHeartRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:text="@string/heartRateUnit"
+        android:textColor="#050404"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/dashboardPanel"
+        app:layout_constraintStart_toEndOf="@id/heartRateValue"
+        app:layout_constraintTop_toBottomOf="@id/unitOfSteps" />
+
+    <TextView
+        android:id="@+id/pressureUnit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="55dp"
+        android:text="@string/pressureUnit"
+        android:textColor="#100C0C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/dashboardPanel"
+        app:layout_constraintEnd_toEndOf="@id/dashboardPanel"
+        app:layout_constraintStart_toEndOf="@+id/pressureValue"
+        app:layout_constraintTop_toBottomOf="@id/unitOfHeartRate" />
+
+    <ImageButton
+        android:id="@+id/buttonPatientDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="100dp"
+        android:background="#F4F0F0"
+        android:contentDescription="@string/descPatientDetails"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dashboardPanel"
+        app:srcCompat="@drawable/patient_details" />
+
+    <ImageButton
+        android:contentDescription="@string/descProfile"
+        android:id="@+id/profileIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="#FFFCFC"
+        app:srcCompat="@drawable/profile_icon"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <ImageButton
+        android:contentDescription="@string/descNotifications"
+        android:id="@+id/notificationsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="#FAF7F7"
+        app:layout_constraintStart_toEndOf="@id/screenTitle"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        app:srcCompat="@drawable/notifications"
+        tools:layout_editor_absoluteX="317dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:contentDescription="@string/descSettings"
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FBF9F9"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@id/notificationsButton"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:srcCompat="@drawable/settings_icon"
+        tools:layout_editor_absoluteX="363dp"
+        tools:layout_editor_absoluteY="27dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
