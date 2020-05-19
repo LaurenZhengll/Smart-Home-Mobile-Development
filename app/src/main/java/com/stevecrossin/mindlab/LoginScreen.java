@@ -174,7 +174,7 @@ public class LoginScreen extends AppCompatActivity {
     /*private class LoginBtnOnClickLis implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(LoginScreen.this,Profile.class);
+            Intent intent = new Intent(LoginScreen.this,ProfileForAged.class);
             startActivity(intent);
                }
             }

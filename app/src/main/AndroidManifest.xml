@@ -20,8 +20,10 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SignUpScreen" />
         <activity android:name=".PatientDetail" />
-        <activity android:name=".Profile" />
+        <activity android:name=".Profile"/>
         <activity android:name=".SettingsScreen"/>
+        <activity android:name=".ProfileForAged"/>
+
     </application>
 
 </manifest>
