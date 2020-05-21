@@ -45,4 +45,5 @@
     <string name="descHeartRate">HeartRateIcon</string>
     <string name="descBP">BPIcon</string>
     <string name="descPatientDetails">PatientDetails</string>
+    <string name="descMyDevices">MyDevices</string>
 </resources>
