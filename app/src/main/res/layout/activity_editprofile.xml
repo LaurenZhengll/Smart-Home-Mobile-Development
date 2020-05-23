@@ -6,13 +6,16 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/editProfileTitle"
-        android:layout_width="112dp"
+        android:layout_width="0dp"
         android:layout_height="38dp"
-        android:text="Edit Profile"
-        android:textSize="20sp"
+        android:text="Edit Profile - Patient"
+        android:gravity="center"
+        android:autoSizeTextType="uniform"
         android:textStyle="bold"
         android:textColor="#2699fb"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         app:layout_constraintBottom_toTopOf="@id/editfamilyname"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +26,6 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="Family Name"
-        android:textSize="17sp"
         android:textStyle="bold"
         android:textColor="#2699fb"
         android:background="@drawable/edit_profile_bg"
@@ -273,10 +275,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/institutionField"
         app:layout_constraintStart_toEndOf="@id/editContact"/>
-    
+
     <Button
         android:id="@+id/saveButton"
-        android:layout_width="343dp"
+        android:layout_width="0dp"
         android:layout_height="44dp"
         android:background="@drawable/edit_profile_button"
         android:text="SAVE"
@@ -284,6 +286,8 @@
         android:textSize="24sp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
