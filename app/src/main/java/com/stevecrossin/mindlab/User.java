@@ -1,9 +1,12 @@
-package com.example.filereader;
+package com.stevecrossin.mindlab;
+
+import java.util.ArrayList;
 
 public class User {
     private String password;
     private String username;
     private String email;
+    private ArrayList<Event> events = new ArrayList<>();
 
     public User() {
     }
@@ -36,6 +39,17 @@ public class User {
 
     public void  setEmail(String Email) {
         this.email = email;
+    }
+
+    public void setEvents(ArrayList<Event> events){
+        this.events = events;
+    }
+
+    public void addEvent(Event event){
+        if(events == null){
+            events = new ArrayList<>();
+        }
+        events.add(event);
     }
 }
 

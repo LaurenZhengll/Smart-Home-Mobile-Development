@@ -1,4 +1,4 @@
-package com.example.filereader;
+package com.stevecrossin.mindlab;
 
 public class Coordinates {
     private  String CoordinateX;
@@ -6,15 +6,12 @@ public class Coordinates {
 
     public  Coordinates()
     {
-
     }
 
     public Coordinates(String x, String y)
     {
         this.CoordinateX = x;
         this.CoordinateY =y;
-
-
     }
 
     public String getCoordinateX() {

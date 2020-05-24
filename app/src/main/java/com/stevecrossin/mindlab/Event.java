@@ -1,7 +1,5 @@
-package com.example.filereader;
+package com.stevecrossin.mindlab;
 
-
-import com.example.filereader.Coordinates;
 
 import java.util.ArrayList;
 
@@ -44,10 +42,14 @@ public class Event {
     }
 
     public  void AddCoordinates(String x, String y)
-{
+    {
     Coordinates coordinates = new Coordinates(x,y);
     cdlist.add(coordinates);
 
-}
+    }
+
+    public ArrayList<Coordinates> getCoordinates(){
+        return cdlist;
+    }
 
 }

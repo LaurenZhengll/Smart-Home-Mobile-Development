@@ -4,24 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.filereader.Event;
-import com.example.filereader.User;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.stevecrossin.mindlab.R;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
-import java.util.StringTokenizer;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -30,16 +22,15 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference mRootReference = firebaseDatabase.getReference();
-    private DatabaseReference mChildReference = mRootReference.child("User3");
-    private DatabaseReference userNode = firebaseDatabase.getReference("User3");
+    private DatabaseReference mChildReference = mRootReference.child("User2");
+    private DatabaseReference userNode = firebaseDatabase.getReference("User2");
+    private String personId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mRootReference.child("User3").setValue(1);
-        writeNewUser("123","Jay","abcd@gmail.com", "Password1");
-        writeNewUser("890","Sam","12jk@gmail.com", "alskdf12");
-
+        /*mRootReference.child("User3").setValue(1);*/
+       /* writeNewUser("123","Jay","abcd@gmail.com", "Password1");*/
         ArrayList<Event> Events = new ArrayList<>();
         try {
             filterLog();
@@ -47,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        for(Event event: Events) {
-            int unique_id = (int)((new Date().getTime()/1000L)% Integer.MAX_VALUE);
-            mChildReference.child("User3").child("123").child("Event");
-        }
+        writeNewUser("890","Sam","12jk@gmail.com", "alskdf12");
+
+
+
         // setContentView(R.layout.activity_main);
 
        /* try {
@@ -68,10 +59,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void writeNewUser(String userId, String name, String email, String password) {
+        personId = mRootReference.push().getKey();
+
         User user = new User(name, email,password);
         // mRootReference.child("users").child(userId).setValue(user);
         //userNode.setValue(user);
-        mChildReference.child(userId).setValue(user);
+        mChildReference.child(personId).setValue(user);
+
+        for(Event event: Events) {
+            DatabaseReference eventReference = mChildReference.child(personId).child("Events").push();
+            eventReference.setValue(event);
+        }
     }
 
 
@@ -103,17 +101,16 @@ public class MainActivity extends AppCompatActivity {
             System.out.println(bd);
 
         }
-
-
     }
-
-
     public void  filterLog() throws IOException {
         InputStream inputStream  =  getResources().openRawResource(R.raw.alerts);
         InputStreamReader isr = new InputStreamReader(inputStream);
         BufferedReader read = new BufferedReader(isr);
-        String line = null;
+        String line;
         while ((line = read.readLine()) != null) {
+            if(Events == null){
+                Events = new ArrayList<>();
+            }
 
             Events.add(parseLineItem(line));
             //parseLineItem(line);
@@ -203,7 +200,6 @@ public class MainActivity extends AppCompatActivity {
                 tuplethrowaway = tuplestring.substring(startpoint, i);
             }
 
-
             if (tuplestring.charAt(i) == ')') {
 
                 if (!tuplethrowaway.isEmpty()) {
@@ -215,12 +211,8 @@ public class MainActivity extends AppCompatActivity {
 
                 j++;
                 startpoint = i + 2;
-
             }
-
-
         }
-
         //  String [] tuplesarry = tuplestring.split("");
         for (int i = 0; i < tuplearray.length; i++)
         {
@@ -234,10 +226,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
         System.out.println("I think this will work");
-
-
-
-        return  event;
+        return event;
     }
 
 }
