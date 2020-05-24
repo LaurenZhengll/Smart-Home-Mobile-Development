@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".EditProfilePatient"></activity>
         <activity android:name=".LoginScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,10 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".SignUpScreen"/>
-        <activity android:name=".SettingsScreen"/>
-        <activity android:name=".EditProfileScreen"/>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignUpScreen" />
+        <activity android:name=".SettingsScreen" />
+        <activity android:name=".EditProfileScreen" />
     </application>
 
 </manifest>
