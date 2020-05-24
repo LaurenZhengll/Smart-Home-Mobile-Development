@@ -8,7 +8,7 @@
         android:id="@+id/editProfileTitle"
         android:layout_width="0dp"
         android:layout_height="38dp"
-        android:text="Edit Profile - Patient"
+        android:text="Edit Profile - Care Taker"
         android:gravity="center"
         android:autoSizeTextType="uniform"
         android:textStyle="bold"
@@ -27,6 +27,7 @@
         android:layout_height="50dp"
         android:text="Family Name"
         android:textStyle="bold"
+        android:textSize="17sp"
         android:textColor="#2699fb"
         android:background="@drawable/edit_profile_bg"
         android:gravity="fill"
@@ -162,7 +163,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="0dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@id/editOccupancy"
+        app:layout_constraintBottom_toTopOf="@id/editContact"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ediAddress"
         app:layout_constraintEnd_toStartOf="@id/stateSpinner"/>
@@ -178,12 +179,12 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/occupancyField"
+        app:layout_constraintBottom_toTopOf="@id/contactField"
         app:layout_constraintTop_toBottomOf="@id/addressField"
         app:layout_constraintStart_toEndOf="@id/editState"/>
 
     <TextView
-        android:id="@+id/editOccupancy"
+        android:id="@+id/editContact"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="Occupancy"
@@ -195,13 +196,13 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="0dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@id/editInstitution"
+        app:layout_constraintBottom_toTopOf="@id/editcondition"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editState"
-        app:layout_constraintEnd_toStartOf="@id/occupancyField"/>
+        app:layout_constraintEnd_toStartOf="@id/contactField"/>
 
     <EditText
-        android:id="@+id/occupancyField"
+        android:id="@+id/contactField"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:textSize="17sp"
@@ -210,12 +211,12 @@
         android:layout_marginRight="35dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/institutionField"
+        app:layout_constraintBottom_toTopOf="@id/conditionField"
         app:layout_constraintTop_toBottomOf="@id/stateSpinner"
-        app:layout_constraintStart_toEndOf="@id/editOccupancy"/>
+        app:layout_constraintStart_toEndOf="@id/editContact"/>
 
     <TextView
-        android:id="@+id/editInstitution"
+        android:id="@+id/editcondition"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="Institution"
@@ -227,13 +228,13 @@
         android:layout_marginLeft="25dp"
         android:layout_marginRight="0dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@id/editContact"
+        app:layout_constraintBottom_toTopOf="@id/editAllergy"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editOccupancy"
-        app:layout_constraintEnd_toStartOf="@id/institutionField"/>
+        app:layout_constraintTop_toBottomOf="@id/editContact"
+        app:layout_constraintEnd_toStartOf="@id/conditionField"/>
 
     <EditText
-        android:id="@+id/institutionField"
+        android:id="@+id/conditionField"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:textSize="17sp"
@@ -242,12 +243,12 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/contactField"
-        app:layout_constraintTop_toBottomOf="@id/occupancyField"
-        app:layout_constraintStart_toEndOf="@id/editInstitution"/>
+        app:layout_constraintBottom_toTopOf="@id/allergyField"
+        app:layout_constraintTop_toBottomOf="@id/contactField"
+        app:layout_constraintStart_toEndOf="@id/editcondition"/>
 
     <TextView
-        android:id="@+id/editContact"
+        android:id="@+id/editAllergy"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:text="Contact Number"
@@ -260,11 +261,11 @@
         android:layout_marginRight="0dp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editInstitution"
-        app:layout_constraintEnd_toStartOf="@id/contactField"/>
+        app:layout_constraintTop_toBottomOf="@id/editcondition"
+        app:layout_constraintEnd_toStartOf="@id/allergyField"/>
 
     <EditText
-        android:id="@+id/contactField"
+        android:id="@+id/allergyField"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:textSize="17sp"
@@ -273,8 +274,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="35dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/institutionField"
-        app:layout_constraintStart_toEndOf="@id/editContact"/>
+        app:layout_constraintTop_toBottomOf="@id/conditionField"
+        app:layout_constraintStart_toEndOf="@id/editAllergy"/>
 
     <Button
         android:id="@+id/saveButton"
@@ -291,7 +292,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contactField"/>
+        app:layout_constraintTop_toBottomOf="@id/allergyField"/>
 
 
 
