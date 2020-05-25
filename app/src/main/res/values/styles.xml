@@ -1,10 +1,15 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/purple500</item>
         <item name="colorPrimaryDark">@color/purple700</item>
         <item name="colorAccent">@color/teal200</item>
+    </style>
+
+    <style name="button" parent="TextAppearance.AppCompat">
+        <item name="android:background">#fc3fff</item>
+        <item name="android:layout_marginBottom">16dp</item>
     </style>
 
 </resources>
