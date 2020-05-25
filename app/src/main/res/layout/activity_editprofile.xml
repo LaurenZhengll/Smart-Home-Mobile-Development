@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/editProfileTitle"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:text="Edit Profile - Care Taker"
+        android:gravity="center"
+        android:autoSizeTextType="uniform"
+        android:textStyle="bold"
+        android:textColor="#2699fb"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintBottom_toTopOf="@id/editfamilyname"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/editfamilyname"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Family Name"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:textColor="#2699fb"
+        android:background="@drawable/edit_profile_bg"
+        android:gravity="fill"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/editgivenName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editProfileTitle"
+        app:layout_constraintEnd_toStartOf="@id/familynameField"/>
+
+    <EditText
+        android:id="@+id/familynameField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:textColor="#2699fb"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        android:background="@drawable/edit_profile_bg"
+        app:layout_constraintBottom_toTopOf="@id/givennameField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editProfileTitle"
+        app:layout_constraintStart_toEndOf="@id/editfamilyname"/>
+
+    <TextView
+        android:id="@+id/editgivenName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Given Name"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#2699fb"
+        android:gravity="fill"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/editdob"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editfamilyname"
+        app:layout_constraintEnd_toStartOf="@id/givennameField"/>
+
+    <EditText
+        android:id="@+id/givennameField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dobField"
+        app:layout_constraintTop_toBottomOf="@id/familynameField"
+        app:layout_constraintStart_toEndOf="@id/editgivenName"/>
+
+    <TextView
+        android:id="@+id/editdob"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Date of Birth"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#2699fb"
+        android:gravity="fill"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/ediAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editgivenName"
+        app:layout_constraintEnd_toStartOf="@id/dobField"/>
+
+    <EditText
+        android:id="@+id/dobField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:textColor="#2699fb"
+        android:hint="dd/mm/yyyy"
+        android:gravity="center"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addressField"
+        app:layout_constraintTop_toBottomOf="@id/givennameField"
+        app:layout_constraintStart_toEndOf="@id/editdob"/>
+
+    <TextView
+        android:id="@+id/ediAddress"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Address"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#2699fb"
+        android:gravity="fill"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/editState"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editdob"
+        app:layout_constraintEnd_toStartOf="@id/addressField"/>
+
+    <EditText
+        android:id="@+id/addressField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:textColor="#2699fb"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/stateSpinner"
+        app:layout_constraintTop_toBottomOf="@id/dobField"
+        app:layout_constraintStart_toEndOf="@id/ediAddress"/>
+
+    <TextView
+        android:id="@+id/editState"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="State"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#2699fb"
+        android:gravity="fill"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/editContact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ediAddress"
+        app:layout_constraintEnd_toStartOf="@id/stateSpinner"/>
+
+    <Spinner
+        android:id="@+id/stateSpinner"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:textColor="#2699fb"
+        android:background="@drawable/edit_profile_bg"
+        android:entries="@array/state_arrays"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/contactField"
+        app:layout_constraintTop_toBottomOf="@id/addressField"
+        app:layout_constraintStart_toEndOf="@id/editState"/>
+
+    <TextView
+        android:id="@+id/editContact"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Occupancy"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#2699fb"
+        android:gravity="fill"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/editcondition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editState"
+        app:layout_constraintEnd_toStartOf="@id/contactField"/>
+
+    <EditText
+        android:id="@+id/contactField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:textColor="#2699fb"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/conditionField"
+        app:layout_constraintTop_toBottomOf="@id/stateSpinner"
+        app:layout_constraintStart_toEndOf="@id/editContact"/>
+
+    <TextView
+        android:id="@+id/editcondition"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Institution"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#2699fb"
+        android:gravity="fill"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/editAllergy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editContact"
+        app:layout_constraintEnd_toStartOf="@id/conditionField"/>
+
+    <EditText
+        android:id="@+id/conditionField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:textColor="#2699fb"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/allergyField"
+        app:layout_constraintTop_toBottomOf="@id/contactField"
+        app:layout_constraintStart_toEndOf="@id/editcondition"/>
+
+    <TextView
+        android:id="@+id/editAllergy"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Contact Number"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#2699fb"
+        android:gravity="fill"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editcondition"
+        app:layout_constraintEnd_toStartOf="@id/allergyField"/>
+
+    <EditText
+        android:id="@+id/allergyField"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:textColor="#2699fb"
+        android:background="@drawable/edit_profile_bg"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conditionField"
+        app:layout_constraintStart_toEndOf="@id/editAllergy"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_profile_button"
+        android:text="SAVE"
+        android:textColor="#ffff"
+        android:textSize="24sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/allergyField"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

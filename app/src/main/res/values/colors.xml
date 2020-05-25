@@ -9,4 +9,6 @@
     <color name="orange">#F8761E</color>
     <color name="gray">#999EA3</color>
     <color name="skyblue">#2283FA</color>
+    <color name='blue'>#2699FB</color>
+    <color name='lightblue'>#F1F9FF</color>
 </resources>

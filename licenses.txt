@@ -1,0 +1,7 @@
+License information for any files in project
+
+Format for each entry should include - filename, license type (e.g. CC-BY-SA 3.0), author and URL of original file.
+
+Example: Breakfast.png, License type: Pexels License (free to use), Author: Burst, Url: https://www.pexels.com/photo/variety-of-cooked-dishes-374052/
+
+------------

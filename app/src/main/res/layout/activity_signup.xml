@@ -4,175 +4,188 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--Image button to go back to the login page-->
-    <ImageButton
-        android:id="@+id/back_btn"
-        android:layout_width="99dp"
-        android:layout_height="32dp"
-        android:background="@drawable/back_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/back_button" />
-
-    <TextView
-        android:id="@+id/createAccount"
-        android:layout_width="255dp"
-        android:layout_height="96dp"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/createAccountTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
         android:text="Create Account"
         android:textColor="#00BBFF"
-        android:textSize="25dp"
+        app:autoSizeTextType="uniform"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/familyName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--familyname-->
     <EditText
         android:id="@+id/familyName"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
-        android:ems="10"
+        app:autoSizeTextType="uniform"
         android:gravity="center"
         android:hint="Family Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/givenName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintTop_toBottomOf="@+id/createAccountTitle" />
 
     <!--given name-->
     <EditText
         android:id="@+id/givenName"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
-        android:ems="10"
+        app:autoSizeTextType="uniform"
         android:gravity="center"
         android:hint="Given Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dob"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.245" />
+        app:layout_constraintTop_toBottomOf="@id/familyName" />
 
     <!--date of birth-->
     <EditText
         android:id="@+id/dob"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
-        android:ems="10"
+        app:autoSizeTextType="uniform"
         android:gravity="center"
         android:hint="Date of Birth"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/address"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35" />
+        app:layout_constraintTop_toBottomOf="@id/givenName" />
 
     <!--address-->
     <EditText
         android:id="@+id/address"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
         android:background="@drawable/signup_plaintext"
         android:ems="10"
         android:gravity="center"
         android:hint="Address"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/stateSpinner"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.459" />
+        app:layout_constraintTop_toBottomOf="@id/dob" />
 
     <!--spinner to select the state-->
     <Spinner
         android:id="@+id/stateSpinner"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/state_spinner_border"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/signup_plaintext"
         android:entries="@array/state_arrays"
+        android:gravity="center_horizontal"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/emergencyNumber"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@id/address" />
 
     <!--emergency number-->
-    <EditText
-        android:id="@+id/emergencyNumber"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/signup_plaintext"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="Emergency Contact Number"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.675" />
 
     <!--username-->
     <EditText
-        android:id="@+id/signupUsername"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:id="@+id/emergencyNumber"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
-        android:ems="10"
         android:gravity="center"
+        android:hint="Emergency Contact Number"
+        android:inputType="textPersonName"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@id/signupUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stateSpinner" />
+
+    <EditText
+        android:id="@+id/signupUsername"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/signup_plaintext"
+        android:gravity="center"
+        app:autoSizeTextType="uniform"
         android:hint="Username"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/signupPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        app:layout_constraintTop_toBottomOf="@id/emergencyNumber" />
 
     <!--password-->
     <EditText
         android:id="@+id/signupPassword"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/signup_plaintext"
-        android:ems="10"
+        app:autoSizeTextType="uniform"
         android:gravity="center"
         android:hint="Password"
         android:inputType="textPersonName|textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/createbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.881" />
+        app:layout_constraintTop_toBottomOf="@id/signupUsername" />
 
     <!--create account button-->
     <Button
         android:id="@+id/createbtn"
-        android:layout_width="315dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/edit_login_btn"
         android:text="Signup"
         android:textColor="#fff"
@@ -182,7 +195,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+        app:layout_constraintTop_toBottomOf="@id/signupPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
