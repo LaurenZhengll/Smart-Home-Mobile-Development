@@ -106,4 +106,27 @@
         <item>Chinese</item>
         <item>Spanish</item>
     </string-array>
+
+    <string name="patientName">Fiona Lau</string>
+    <string name="ageTextView">Age: </string>
+    <string name="ageValue">74</string>
+    <string name="statusTextView">Status: </string>
+    <string name="statusValue">Safe</string>
+    <string name="stepCountDisplay">2,722</string>
+    <string name="stepUnit">steps</string>
+    <string name="heartRateDisplay">89 </string>
+    <string name="heartRateUnit">BPM</string>
+    <string name= "pressureDisplay">120/80 </string>
+    <string name="pressureUnit">mmHG</string>
+    <string name="descTitle">homeScreen</string>
+    <string name="descProfile">profileButton</string>
+    <string name="descNotifications">notificationsButton</string>
+    <string name="descSettings">settingsButton</string>
+    <string name="descProPic">ProfilePic</string>
+    <string name="descDashboardPanel">DashboardPanel</string>
+    <string name="descSteps">StepsIcon</string>
+    <string name="descHeartRate">HeartRateIcon</string>
+    <string name="descBP">BPIcon</string>
+    <string name="descPatientDetails">PatientDetails</string>
+    <string name="descMyDevices">MyDevices</string>
 </resources>

@@ -42,8 +42,6 @@ public class LoginScreen extends AppCompatActivity {
     }
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +49,15 @@ public class LoginScreen extends AppCompatActivity {
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
         loginBtn = findViewById(R.id.login);
+        loginBtn.setOnClickListener(new LoginBtnOnClick());
+    }
+
+    private class LoginBtnOnClick implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(LoginScreen.this,MainActivity.class);
+            startActivity(intent);
+        }
     }
 
 
