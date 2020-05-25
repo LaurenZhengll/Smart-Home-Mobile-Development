@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">MinD Lab</string>
     <string name="title_activity_login">Sign in</string>
     <string name="prompt_email">Email</string>
@@ -10,6 +10,10 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="privacy"><u>Privacy Policy</u></string>
+    <string name="minimum_password">The password must be longer than 6 characters!</string>
+    <string name="auth_failed">Authentication failed.</string>
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="firebase_status_fmt">Firebase UID: %s</string>
     <string name="patient_detail">Patient Detail</string>
     <string name="backbtn">Back Button</string>
     <string name="name">Fiona Lau</string>
@@ -37,8 +41,44 @@
     <string name="profileBg">profile page light blue background</string>
 
 
+    <!--String content for alert pages-->
+    <string name="alert_title">ALERT</string>
+    <string name="case_fall">FALL</string>
+    <string name="detect_text">detect</string>
+    <string name="response_text_one">Response in:</string>
+    <string name="timer_text_one">09:47</string>
+    <string name="response_text_two">Auto response in:</string>
+    <string name="timer_text_two">00:07</string>
+    <string name="response_button">RESPONSE</string>
+    <string name="name_text">Name:</string>
+    <string name="patient_name">Fiona Lau</string>
+    <string name="age_text">Age:</string>
+    <string name="patient_age">74</string>
+    <string name="address_text">Address:</string>
+    <string name="patient_address">234 Burwood Hwy</string>
+    <string name="case_text">Emergency:</string>
+    <string name="contact_case">CONTACT</string>
+    <string name="ambulance_case">AMBULANCE</string>
+    <string name="police_case">POLICE</string>
+    <string name="data_case">LIVE DATA</string>
+    <string name="clear_button">CLEAR</string>
+    <string name="message_text_one">DON\'T WORRY</string>
+    <string name="message_text_two">Our staff is reaching you</string>
+    <string name="response_text_three">Response needed in:</string>
+    <string name="clear_button_two">IT\'S A FAULT. I\'M GOOD.</string>
+
     <!--States to be selected from the spinner in signup page-->
     <string name="state_prompt">State</string>
+    <string name="mainActivityTestLabel">This is the screen after login</string>
+    <string name="unique_id">UNIQUE ID:</string>
+    <string name="initial_id">001</string>
+    <string name="addButtonText">Add</string>
+    <string name="initial_name"></string>
+    <string name="device_name">Device Name</string>
+    <string name="location">Location</string>
+    <string name="device_type">Device Type</string>
+    <string name="status">Status</string>
+    <string name="priority">Priority</string>
     <string-array name="state_arrays">
         <item>"State"</item>
         <item>VIC</item>
@@ -49,4 +89,84 @@
         <item>TAS</item>
         <item>ACT</item>
     </string-array>
+
+    <!--arrays using in Add New Device layout-->
+    <string-array name="location">
+        <item />
+        <item>Kitchen</item>
+        <item>Living Room</item>
+        <item>Study</item>
+        <item>Bed Room</item>
+        <item>Dinning Room</item>
+        <item>Restroom</item>
+    </string-array>
+
+    <string-array name="device_Type">
+        <item />
+        <item>Device Camera</item>
+        <item>Sensor</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="status">
+        <item />
+        <item>Operating</item>
+        <item>Off Line</item>
+        <item>Available</item>
+        <item>Unavailable</item>
+    </string-array>
+
+    <string-array name="priority">
+        <item />
+        <item>HIGH</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+
+    <!--Font size to be selected from the spinner in Settings page-->
+    <string name="font_prompt">Medium</string>
+    <string-array name="font_arrays">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+
+    <!--Languages to be selected from the spinner in Settings page-->
+    <string name="language_prompt">English</string>
+    <string name="settingsTitle">SETTINGS</string>
+    <string name="labelsettings">Settings</string>
+    <string name="txtVibrate">Vibrate</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="font_size">Font Size</string>
+    <string name="language">Language</string>
+    <string name="logout">Log Out</string>
+    <string name="delete_account">Delete Account</string>
+    <string-array name="language_arrays">
+        <item>English</item>
+        <item>Chinese</item>
+        <item>Spanish</item>
+    </string-array>
+
+    <string name="patientName">Fiona Lau</string>
+    <string name="ageTextView">Age: </string>
+    <string name="ageValue">74</string>
+    <string name="statusTextView">Status: </string>
+    <string name="statusValue">Safe</string>
+    <string name="stepCountDisplay">2,722</string>
+    <string name="stepUnit">steps</string>
+    <string name="heartRateDisplay">89 </string>
+    <string name="heartRateUnit">BPM</string>
+    <string name= "pressureDisplay">120/80 </string>
+    <string name="pressureUnit">mmHG</string>
+    <string name="descTitle">homeScreen</string>
+    <string name="descProfile">profileButton</string>
+    <string name="descNotifications">notificationsButton</string>
+    <string name="descSettings">settingsButton</string>
+    <string name="descProPic">ProfilePic</string>
+    <string name="descDashboardPanel">DashboardPanel</string>
+    <string name="descSteps">StepsIcon</string>
+    <string name="descHeartRate">HeartRateIcon</string>
+    <string name="descBP">BPIcon</string>
+    <string name="descPatientDetails">PatientDetails</string>
+    <string name="descMyDevices">MyDevices</string>
 </resources>

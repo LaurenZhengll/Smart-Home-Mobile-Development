@@ -93,10 +93,8 @@
         android:id="@+id/ageValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="170dp"
         android:layout_marginRight="170dp"
         android:text="@string/ageValue"
         android:textColor="#0C0909"
@@ -111,7 +109,6 @@
         android:id="@+id/statusText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="5dp"
         android:gravity="center"
@@ -128,15 +125,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="125dp"
-        android:layout_marginEnd="125dp"
+        android:layout_marginRight="150dp"
         android:gravity="center"
         android:text="@string/statusValue"
         android:textColor="#64DC28"
         android:textSize="18sp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/statusText"
-        app:layout_constraintTop_toBottomOf="@id/ageValue" />
+        app:layout_constraintTop_toBottomOf="@id/ageValue"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="268dp" />
 
     <ImageView
         android:contentDescription="@string/descSteps"
@@ -144,7 +143,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="@id/dashboardPanel"
         app:layout_constraintTop_toTopOf="@id/dashboardPanel"
@@ -157,7 +155,6 @@
         android:id="@+id/heartRateIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="@id/dashboardPanel"
@@ -172,7 +169,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="55dp"
         app:layout_constraintBottom_toBottomOf="@id/dashboardPanel"
@@ -204,7 +200,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:text="@string/heartRateDisplay"
@@ -240,12 +235,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:text="@string/stepUnit"
         android:textColor="#050404"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@id/stepsValue"
         app:layout_constraintEnd_toEndOf="@id/dashboardPanel"
         app:layout_constraintTop_toTopOf="@id/dashboardPanel" />
 
@@ -256,7 +250,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginRight="100dp"
         android:text="@string/heartRateUnit"
         android:textColor="#050404"
@@ -272,7 +266,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         android:layout_marginBottom="55dp"
         android:text="@string/pressureUnit"
@@ -282,36 +276,6 @@
         app:layout_constraintEnd_toEndOf="@id/dashboardPanel"
         app:layout_constraintStart_toEndOf="@+id/pressureValue"
         app:layout_constraintTop_toBottomOf="@id/unitOfHeartRate" />
-
-    <ImageButton
-        android:id="@+id/buttonPatientDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="100dp"
-        android:background="#F4F0F0"
-        android:contentDescription="@string/descPatientDetails"
-        android:foregroundGravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dashboardPanel"
-        app:srcCompat="@drawable/patient_details" />
-
-    <Button
-        android:id="@+id/signout_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="signout"
-        android:text="SIGN OUT"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonPatientDetails" />
 
     <ImageButton
         android:contentDescription="@string/descProfile"
@@ -358,7 +322,25 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:srcCompat="@drawable/settings_icon"
-        android:onClick="goToSettings"
         tools:layout_editor_absoluteX="363dp"
         tools:layout_editor_absoluteY="27dp" />
+
+    <ImageButton
+        android:id="@+id/myDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="100dp"
+        android:background="#F4F0F0"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dashboardPanel"
+        app:srcCompat="@drawable/my_devices_button"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
