@@ -2,6 +2,7 @@ package com.stevecrossin.mindlab;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,11 +18,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
+import android.view.View;
+
 
 public class LoginScreen extends AppCompatActivity {
     public EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private Button btnLogin;
+    private Button loginBtn;
 
     @Override
     public void onStart() {
@@ -38,13 +42,34 @@ public class LoginScreen extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
+        loginBtn = findViewById(R.id.login);
+        loginBtn.setOnClickListener(new LoginBtnOnClick());
+    }
+
+    private class LoginBtnOnClick implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(LoginScreen.this,MainActivity.class);
+            startActivity(intent);
+        }
+    }
+
+
+    /*public void bypassLogin(View view) {
+        Intent intent = new Intent(this, SettingsScreen.class);
+        startActivity(intent);
+    }
+*/
+
+    public void onStop() {
+        super.onStop();
+        FirebaseAuth.getInstance().signOut();
     }
 
 /*
@@ -54,6 +79,7 @@ public class LoginScreen extends AppCompatActivity {
 //        super.onStop();
 //        FirebaseAuth.getInstance().signOut();
 //    }
+
 
     /**
      * Authentication task. This method is invoke through onClick of login button in activity_login.
@@ -118,4 +144,43 @@ public class LoginScreen extends AppCompatActivity {
         Intent intent = new Intent(this, SignUpScreen.class);
         startActivity(intent);
     }
+
+    // Commented out below code block - this code does not belong on this screen.
+
+    /* *
+     * This is an intent. When the method is called by the OnClick, it will navigate to the relevant screen
+     **//*
+    public void GoToDevices(View view) {
+        Intent intent = new Intent(this, MyDevices.class);
+        startActivity(intent);
+    }
+
+    *
+     * This is an intent. When the method is called by the OnClick, it will navigate to the relevant screen
+     **//*
+    public void GoToAddNewDevices(View view) {
+        Intent intent = new Intent(this, AddNewDevice.class);
+        startActivity(intent);
+    }*/
 }
+
+
+        //loginBtn.setOnClickListener(new LoginBtnOnClickLis());
+
+
+    /**
+     * Commented out this code. This is not the correct way to implement an onClick listener - but also this does not belong here,
+     * as this is the login screen and for testing, it is fine to implement this, but this shouldn't be pushed as final code.
+     **/
+    /*private class LoginBtnOnClickLis implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(LoginScreen.this,ProfileForAged.class);
+            startActivity(intent);
+               }
+            }
+        */
+
+
+
+

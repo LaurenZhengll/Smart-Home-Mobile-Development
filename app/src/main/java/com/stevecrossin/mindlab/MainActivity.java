@@ -20,11 +20,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        button = findViewById(R.id.goTo_settings);
+        //button = findViewById(R.id.settingsButton);
 
     }
-
 
     public void goToSettings(View view) {
         if (user != null) {
@@ -44,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         } else {
             Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
-            return;}
+        }
+        //Why is this line of code here?
+        //setContentView(R.layout.layout_carer_one);
+
     }
 }
