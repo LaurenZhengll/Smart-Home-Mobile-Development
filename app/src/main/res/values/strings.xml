@@ -169,4 +169,9 @@
     <string name="descBP">BPIcon</string>
     <string name="descPatientDetails">PatientDetails</string>
     <string name="descMyDevices">MyDevices</string>
+
+    <array name="heartRateType">
+        <item>Resting</item>
+        <item>Exercising</item>
+    </array>
 </resources>
