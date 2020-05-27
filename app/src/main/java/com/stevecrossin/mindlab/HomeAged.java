@@ -3,7 +3,6 @@ package com.stevecrossin.mindlab;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,23 +10,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeAged extends AppCompatActivity {
 
-    //Button button;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //button = findViewById(R.id.settingsButton);
-
+        setContentView(R.layout.homescreen_patient);
     }
 
     public void goToProfile(View view) {
         if (user != null) {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            Intent intent = new Intent(this, Profile.class);
+            Intent intent = new Intent(this, ProfileForAged.class);
             startActivity(intent);
         } else {
             Toast.makeText(this, "error", Toast.LENGTH_SHORT).show(); }
@@ -42,26 +38,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "error", Toast.LENGTH_SHORT).show(); }
     }
 
-    public void goToPatientDetial(View view) {
+    public void goToMyDevices(View view) {
         if (user != null) {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            Intent intent = new Intent(this, PatientDetail.class);
+            Intent intent = new Intent(this, MyDevices.class);
             startActivity(intent);
         } else {
             Toast.makeText(this, "error", Toast.LENGTH_SHORT).show(); }
     }
-
-/*    public void signout(View view) {
-        if (user != null) {
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            FirebaseAuth.getInstance().signOut();
-            Intent intent = new Intent(this, LoginScreen.class);
-            startActivity(intent);
-        } else {
-            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
-        }
-        //Why is this line of code here?
-        //setContentView(R.layout.layout_carer_one);
-
-    } */
 }

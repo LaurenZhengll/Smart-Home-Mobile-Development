@@ -291,6 +291,7 @@
         android:layout_marginBottom="15dp"
         android:background="#FFFFFF"
         android:contentDescription="@string/backbtn"
+        android:onClick="goBackToMain"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toTopOf="@+id/textBg"
         app:layout_constraintEnd_toStartOf="@+id/patientDetail"

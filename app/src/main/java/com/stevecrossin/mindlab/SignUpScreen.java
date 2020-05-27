@@ -28,12 +28,12 @@ public class SignUpScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         auth = FirebaseAuth.getInstance();
-        Button signUp = findViewById(R.id.createbtn);
+        //Button signUp = findViewById(R.id.createbtn);
         username = findViewById(R.id.signupUsername);
         userPassword = findViewById(R.id.signupPassword);
 
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+       /* signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -74,7 +74,45 @@ public class SignUpScreen extends AppCompatActivity {
                         });
             }
 
-        });
+        });*/
+    }
+
+    public void saveSignUp(View view){
+        String email = username.getText().toString().trim();
+        String password = userPassword.getText().toString().trim();
+
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (password.length() < 6) {
+            Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(SignUpScreen.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        Toast.makeText(SignUpScreen.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                        // If sign in fails, display a message to the user. If sign in succeeds
+                        // the auth state listener will be notified and logic to handle the
+                        // signed in user can be handled in the listener.
+                        if (!task.isSuccessful()) {
+                            Toast.makeText(SignUpScreen.this, "Authentication failed." + task.getException(),
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            startActivity(new Intent(SignUpScreen.this, MainActivity.class));
+                            finish();
+                        }
+                    }
+                });
     }
 }
 
