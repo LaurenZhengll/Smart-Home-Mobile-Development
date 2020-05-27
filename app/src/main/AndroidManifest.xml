@@ -25,5 +25,6 @@
         <activity android:name=".AddNewDevice"/>
         <activity android:name=".MyDevices" />
         <activity android:name=".EditProfilePatient"/>
+        <activity android:name=".HeatMapActivity"/>
     </application>
 </manifest>
