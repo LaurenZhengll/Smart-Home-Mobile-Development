@@ -1,0 +1,32 @@
+{
+  "client" : [ {
+    "api_key" : [ {
+      "current_key" : "AIzaSyDTiPQ7lQjLVZDDqN0GZAeNQqqxwyS18xA"
+    } ],
+    "client_info" : {
+      "android_client_info" : {
+        "package_name" : "com.stevecrossin.mindlab"
+      },
+      "mobilesdk_app_id" : "1:1047766574047:android:34d99e4acbbd57d40c9a6a"
+    },
+    "oauth_client" : [ {
+      "client_id" : "1047766574047-gb0u2idbobv2j5g0jr1skfs8dbfcoqbt.apps.googleusercontent.com",
+      "client_type" : 3
+    } ],
+    "services" : {
+      "appinvite_service" : {
+        "other_platform_oauth_client" : [ {
+          "client_id" : "1047766574047-gb0u2idbobv2j5g0jr1skfs8dbfcoqbt.apps.googleusercontent.com",
+          "client_type" : 3
+        } ]
+      }
+    }
+  } ],
+  "configuration_version" : "1",
+  "project_info" : {
+    "firebase_url" : "https://mindlab-firebase.firebaseio.com",
+    "project_id" : "mindlab-firebase",
+    "project_number" : "1047766574047",
+    "storage_bucket" : "mindlab-firebase.appspot.com"
+  }
+}
