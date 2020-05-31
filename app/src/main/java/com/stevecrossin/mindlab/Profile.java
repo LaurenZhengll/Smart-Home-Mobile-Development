@@ -68,10 +68,11 @@ public class Profile extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goBackToMain(View view){
+    /**Commented out this - android has inbuilt navigation and this sort of element is discouraged **/
+    /*public void goBackToMain(View view){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
+    }*/
 
 /*
     @Override
