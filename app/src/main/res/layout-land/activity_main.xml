@@ -270,10 +270,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="20dp"
         android:background="#F4F0F0"
         android:contentDescription="@string/descPatientDetails"
+        android:onClick="goToPatientDetial"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dashboardPanel"
@@ -288,11 +289,10 @@
         android:layout_marginTop="16dp"
         android:background="#FFFCFC"
         android:contentDescription="@string/descProfile"
+        android:onClick="goToProfile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/profile_icon"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:srcCompat="@drawable/profile_icon" />
 
     <ImageButton
         android:id="@+id/notificationsButton"
@@ -319,6 +319,7 @@
         android:layout_marginRight="16dp"
         android:background="#FBF9F9"
         android:contentDescription="@string/descSettings"
+        android:onClick="goToSettings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/settings_icon" />
