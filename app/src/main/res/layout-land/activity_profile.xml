@@ -102,6 +102,7 @@
         android:layout_marginBottom="190dp"
         android:background="#FFFFFF"
         android:contentDescription="@string/edit_profile_icon"
+        android:onClick="goToEditProfile"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/profileRecyclerView"
@@ -110,4 +111,5 @@
         app:layout_constraintTop_toBottomOf="@+id/stateText"
         app:layout_constraintVertical_bias="0.011"
         app:srcCompat="@drawable/edit_profile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
