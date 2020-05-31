@@ -8,3 +8,4 @@ Format needs to have - your name, day, date, the files that you worked on, and c
 
 6 May - Steve C
 * LoginScreen.java - adjusted code to not show firebase data to user, tweaked how errors are displayed to end user due to invalid input, wrapped the login firebase auth task in an else { to ensure it is only executed when previous fail conditons are not met.
+lmnmlkm
