@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginBottom="117dp"
+        android:background="@drawable/layout_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/bgLarge"
+            android:layout_width="203dp"
+            android:layout_height="203dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0.1"
+            android:background="@drawable/circle"
+            app:layout_constraintEnd_toEndOf="@id/countDownTimerOne"
+            app:layout_constraintStart_toStartOf="@id/countDownTimerOne"
+            app:layout_constraintTop_toTopOf="@id/countDownTimerOne"
+            app:layout_constraintBottom_toBottomOf="@id/countDownTimerOne"/>
+
+        <ImageView
+            android:id="@+id/bgSmall"
+            android:layout_width="103dp"
+            android:layout_height="103dp"
+            android:alpha="0.2"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="@+id/bgLarge"
+            app:layout_constraintEnd_toEndOf="@+id/bgLarge"
+            app:layout_constraintStart_toStartOf="@+id/bgLarge"
+            app:layout_constraintTop_toTopOf="@+id/bgLarge" />
+
+        <TextView
+            android:id="@+id/responseText"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:layout_marginStart="110dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginRight="110dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="@string/response_text_one"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="50sp"
+            app:autoSizeMinTextSize="15sp"
+            app:autoSizeStepGranularity="10sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/countDownTimerOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/countDownTimerOne"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/timer_text_one"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="60sp"
+            app:autoSizeMinTextSize="20sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/patientName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/responseText" />
+
+        <ImageView
+            android:id="@+id/patientImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toTopOf="@+id/contactStruc"
+            app:layout_constraintEnd_toStartOf="@id/bgSmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="0dp"
+            android:layout_height="0sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="start"
+            android:text="@string/name_text"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="32sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/ageText"
+            app:layout_constraintEnd_toStartOf="@+id/patientName"
+            app:layout_constraintStart_toEndOf="@id/patientImage"
+            app:layout_constraintTop_toBottomOf="@id/countDownTimerOne" />
+
+        <TextView
+            android:id="@+id/patientName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="start"
+            android:text="@string/patient_name"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="33sp"
+            app:autoSizeMinTextSize="13sp"
+            app:autoSizeStepGranularity="10sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/patientAge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/nameText"
+            app:layout_constraintTop_toBottomOf="@id/countDownTimerOne" />
+
+        <TextView
+            android:id="@+id/ageText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="start"
+            android:text="@string/age_text"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="32sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/addressText"
+            app:layout_constraintEnd_toStartOf="@id/patientAge"
+            app:layout_constraintStart_toEndOf="@id/patientImage"
+            app:layout_constraintTop_toBottomOf="@id/nameText" />
+
+        <TextView
+            android:id="@+id/patientAge"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/patient_age"
+            android:textColor="#2699FB"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="33sp"
+            app:autoSizeMinTextSize="13sp"
+            app:autoSizeStepGranularity="10sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/patientAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ageText"
+            app:layout_constraintTop_toBottomOf="@id/patientName" />
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="start"
+            android:text="@string/address_text"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="32sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/caseText"
+            app:layout_constraintEnd_toStartOf="@id/patientAddress"
+            app:layout_constraintStart_toEndOf="@id/patientImage"
+            app:layout_constraintTop_toBottomOf="@id/ageText" />
+
+        <TextView
+            android:id="@+id/patientAddress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:text="@string/patient_address"
+            android:textColor="#2699FB"
+            android:gravity="start"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="31sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/emergencyCase"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/addressText"
+            app:layout_constraintTop_toBottomOf="@id/patientAge" />
+
+        <TextView
+            android:id="@+id/caseText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="160dp"
+            android:gravity="start"
+            android:text="@string/case_text"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="32sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/clearButton"
+            app:layout_constraintEnd_toStartOf="@id/emergencyCase"
+            app:layout_constraintStart_toEndOf="@id/patientImage"
+            app:layout_constraintTop_toBottomOf="@id/addressText" />
+
+        <TextView
+            android:id="@+id/emergencyCase"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="158dp"
+            android:gravity="start"
+            android:text="@string/case_fall"
+            android:textColor="#FB2657"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="33sp"
+            app:autoSizeMinTextSize="13sp"
+            app:autoSizeStepGranularity="10sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/clearButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/caseText"
+            app:layout_constraintTop_toBottomOf="@id/patientAddress" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contactStruc"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/contactText"
+            app:layout_constraintEnd_toStartOf="@+id/ambulanceStruc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/caseText">
+
+
+            <ImageView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/phone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/contactButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/hollow_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/contactText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:text="@string/contact_case"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="38sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintEnd_toStartOf="@id/ambulanceText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contactStruc" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ambulanceStruc"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toTopOf="@id/ambulanceText"
+            app:layout_constraintEnd_toStartOf="@+id/policeStruc"
+            app:layout_constraintStart_toEndOf="@+id/contactStruc"
+            app:layout_constraintTop_toBottomOf="@id/caseText">
+
+
+            <ImageView
+                android:id="@+id/ambulance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ambulance"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/ambulanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/hollow_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/ambulanceText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:text="@string/ambulance_case"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="38sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintEnd_toStartOf="@id/policeText"
+            app:layout_constraintStart_toEndOf="@id/contactText"
+            app:layout_constraintTop_toBottomOf="@id/ambulanceStruc" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/policeStruc"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginRight="27dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/policeText"
+            app:layout_constraintEnd_toStartOf="@+id/dataSturc"
+            app:layout_constraintStart_toEndOf="@+id/ambulanceStruc"
+            app:layout_constraintTop_toBottomOf="@id/caseText">
+
+
+            <ImageView
+                android:id="@+id/police"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/police"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/policeButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/hollow_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/policeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:text="@string/police_case"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="38sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintEnd_toStartOf="@id/dataText"
+            app:layout_constraintStart_toEndOf="@id/ambulanceText"
+            app:layout_constraintTop_toBottomOf="@id/policeStruc" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dataSturc"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/dataText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/policeStruc"
+            app:layout_constraintTop_toBottomOf="@id/caseText">
+
+            <ImageView
+                android:id="@+id/livedata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/sections"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/liveDataButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/hollow_circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/dataText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:text="@string/data_case"
+            android:textColor="#2699FB"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="38sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeStepGranularity="5sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@id/clearButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/policeText"
+            app:layout_constraintTop_toBottomOf="@id/dataSturc" />
+
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="35dp"
+            android:background="@drawable/alert_btn_red"
+            android:text="@string/clear_button"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

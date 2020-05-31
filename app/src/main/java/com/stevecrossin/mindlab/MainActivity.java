@@ -1,8 +1,12 @@
 package com.stevecrossin.mindlab;
 
-import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -16,7 +20,14 @@ import java.util.Date;
 import java.util.Scanner;
 
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
+
+
+    //Button button;
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
     ArrayList<Event> Events = new ArrayList<>();
 
@@ -26,11 +37,15 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference userNode = firebaseDatabase.getReference("User2");
     private String personId;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+        //button = findViewById(R.id.settingsButton);
         /*mRootReference.child("User3").setValue(1);*/
-       /* writeNewUser("123","Jay","abcd@gmail.com", "Password1");*/
+        /* writeNewUser("123","Jay","abcd@gmail.com", "Password1");*/
         ArrayList<Event> Events = new ArrayList<>();
         try {
             filterLog();
@@ -57,6 +72,50 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
+
+
+    public void goToProfile(View view) {
+        if (user != null) {
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            Intent intent = new Intent(this, Profile.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show(); }
+    }
+
+    public void goToSettings(View view) {
+        if (user != null) {
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            Intent intent = new Intent(this, SettingsScreen.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show(); }
+    }
+
+    public void goToPatientDetial(View view) {
+        if (user != null) {
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            Intent intent = new Intent(this, PatientDetail.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show(); }
+    }
+
+/*    public void signout(View view) {
+        if (user != null) {
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            FirebaseAuth.getInstance().signOut();
+            Intent intent = new Intent(this, LoginScreen.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "error", Toast.LENGTH_SHORT).show();
+        }
+        //Why is this line of code here?
+        //setContentView(R.layout.layout_carer_one);
+
+    } */
 
     public void writeNewUser(String userId, String name, String email, String password) {
         personId = mRootReference.push().getKey();
@@ -228,6 +287,7 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("I think this will work");
         return event;
     }
+
 
 }
 

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F9FF">
+
+    <!--Image button to go back to the login page-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/settingsTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:text="@string/labelsettings"
+        android:textColor="#00BBFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/failsafe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/failsafe"
+        app:layout_constraintTop_toTopOf="@id/failsafe"
+        app:layout_constraintBottom_toBottomOf="@id/failsafe"
+        app:srcCompat="@drawable/settings_warning" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/failsafe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Fail Safe"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/toggleButton"
+        app:layout_constraintStart_toEndOf="@id/warning"
+        app:layout_constraintTop_toBottomOf="@id/settingsTitle"
+        app:layout_constraintBottom_toTopOf="@id/vibrate"/>
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="ToggleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/failsafe"
+        app:layout_constraintTop_toTopOf="@id/failsafe"
+        app:layout_constraintBottom_toTopOf="@id/toggleButton2"/>
+
+    <ImageView
+        android:id="@+id/vibrateEclipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vibrate"
+        app:layout_constraintTop_toTopOf="@id/vibrate"
+        app:layout_constraintBottom_toBottomOf="@id/vibrate"
+        app:srcCompat="@drawable/settings_vibrate" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/vibrate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:text="@string/txtVibrate"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/toggleButton2"
+        app:layout_constraintStart_toEndOf="@id/vibrateEclipse"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/togglebutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vibrate"
+        app:layout_constraintTop_toTopOf="@id/vibrate" />
+
+    <ImageView
+        android:id="@+id/fontEclipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fontsize"
+        app:layout_constraintTop_toTopOf="@id/fontsize"
+        app:layout_constraintBottom_toBottomOf="@id/fontsize"
+        app:srcCompat="@drawable/settings_font" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fontsize"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:text="@string/font_size"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/fontSpinner"
+        app:layout_constraintStart_toEndOf="@id/fontEclipse"
+        app:layout_constraintTop_toBottomOf="@id/vibrate"/>
+
+    <Spinner
+        android:id="@+id/fontSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:entries="@array/font_arrays"
+        app:layout_constraintStart_toEndOf="@id/fontsize"
+        app:layout_constraintBottom_toBottomOf="@id/fontsize"
+        app:layout_constraintTop_toTopOf="@id/fontsize"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/languageEclipse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/language"
+        app:layout_constraintTop_toTopOf="@id/language"
+        app:layout_constraintBottom_toBottomOf="@id/language"
+        app:srcCompat="@drawable/settings_language" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:text="@string/language"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@id/languageSpinner"
+        app:layout_constraintStart_toEndOf="@id/languageEclipse"
+        app:layout_constraintTop_toBottomOf="@id/fontsize"/>
+
+    <Spinner
+        android:id="@+id/languageSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
+        android:layout_marginEnd="24dp"
+        android:entries="@array/language_arrays"
+        app:layout_constraintStart_toEndOf="@id/language"
+        app:layout_constraintTop_toTopOf="@id/language"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edit_login_btn"
+        android:onClick="logOut"
+        android:text="@string/logout"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#00BBFF"
+        app:layout_constraintBottom_toTopOf="@+id/deleteaccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/language" />
+
+    <Button
+        android:id="@+id/deleteaccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/deleteaccount_btn"
+        android:onClick="deleteUser"
+        android:text="@string/delete_account"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLogOut" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
