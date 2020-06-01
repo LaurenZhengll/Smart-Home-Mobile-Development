@@ -6,9 +6,7 @@ import java.util.Date;
 
 /**
  * @ClassName: StepDateUtils
- * @Description: 时间工具类（时间格式转换工具类）
- * @Author: yanxu5
- * @Date: 2019/8/19
+ * @Description: Time tools (time format conversion tools)
  */
 class StepDateUtils {
 
@@ -24,7 +22,7 @@ class StepDateUtils {
     }
 
     /**
-     * 返回一定格式的当前时间
+     * Returns the current time in a certain format
      *
      * @param pattern "yyyy-MM-dd HH:mm:ss E"
      * @return String
@@ -42,12 +40,12 @@ class StepDateUtils {
             millionSeconds = getDateFormat().parse(dateString).getTime();
         } catch (ParseException e) {
             e.printStackTrace();
-        }// 毫秒
+        }// millisecond
         return millionSeconds;
     }
 
     /**
-     * 格式化输入的millis
+     * Format input millis
      *
      * @param millis  millis
      * @param pattern yyyy-MM-dd HH:mm:ss E
@@ -60,12 +58,12 @@ class StepDateUtils {
     }
 
     /**
-     * 将dateString原来old格式转换成new格式
+     * Convert the original old format of dateString to new format
      *
      * @param dateString dateString
      * @param oldPattern yyyy-MM-dd HH:mm:ss E
      * @param newPattern newPattern
-     * @return oldPattern和dateString形式不一样直接返回dateString
+     * @return oldPattern is different from dateString and returns dateString directly
      */
     private static String dateFormat(String dateString, String oldPattern, String newPattern) {
         long millis = getDateMillis(dateString, oldPattern);

@@ -20,17 +20,15 @@ import java.util.TimeZone;
 
 /**
  * @ClassName: StepService
- * @Description: 当日步数的Service
- * @Author: yanxu5
- * @Date: 2019/8/19
+ * @Description: Service of the step of the day
  */
 public class StepService extends Service {
 
-    private static final int SAMPLING_PERIOD_US = SensorManager.SENSOR_DELAY_FASTEST; //传感器刷新频率
+    private static final int SAMPLING_PERIOD_US = SensorManager.SENSOR_DELAY_FASTEST; //Sensor refresh rate
     public static final String INTENT_ALARM_0_SEPARATE = "intent_alarm_0_separate";
     public static final String INTENT_BOOT_COMPLETED = "intent_boot_completed";
     private SensorManager mSensorManager;
-    private StepCounter mStepCounter; //Sensor.TYPE_STEP_COUNTER 计步传感器计算当天步数，不需要后台Service
+    private StepCounter mStepCounter; //Sensor.TYPE_STEP_COUNTER pedometer counts the number of steps in the day, no background service is required
     private boolean mIsSeparate = false;
     private boolean mIsBoot = false;
     private int alarmCount;
@@ -39,7 +37,7 @@ public class StepService extends Service {
     public void onCreate() {
         super.onCreate();
         mSensorManager = (SensorManager) this.getSystemService(SENSOR_SERVICE);
-        initAlarm();//开启零点定时
+        initAlarm();//Turn on zero timing
     }
 
     @Override
@@ -67,12 +65,12 @@ public class StepService extends Service {
             mIsSeparate = intent.getBooleanExtra(INTENT_ALARM_0_SEPARATE, false);
             mIsBoot = intent.getBooleanExtra(INTENT_BOOT_COMPLETED, false);
         }
-        startStepDetector();//注册传感器
+        startStepDetector();//Register a sensor
         return START_STICKY;
     }
 
     private void startStepDetector() {
-        //android4.4以后如果有StepDetector可以使用计步传感器
+        //After Android 4.4, if there is a StepDetector, you can use a step counter sensor
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && getStepCounter()) {
             addStepCounterListener();
         } else {
@@ -81,9 +79,9 @@ public class StepService extends Service {
     }
 
     /**
-     * 是否带有计步传感器
+     * Whether with pedometer sensor
      *
-     * @return 返回结果
+     * @return Return result
      */
     private boolean getStepCounter() {
         Sensor countSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
@@ -118,31 +116,31 @@ public class StepService extends Service {
     }
 
     /**
-     * 定义一个零点闹钟
+     * Define a zero alarm
      */
     public void initAlarm() {
         Intent intent = new Intent(this, StepZeroAlarmReceiver.class);
         intent.setAction("alarm_0_separate");
         PendingIntent pi = PendingIntent.getBroadcast(this, alarmCount++, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        long firstTime = SystemClock.elapsedRealtime();//获取系统当前时间
-        long systemTime = System.currentTimeMillis();//java.lang.System.currentTimeMillis()，它返回从UTC1970年1月1午夜开始经过的毫秒数。
+        long firstTime = SystemClock.elapsedRealtime();//Get current system time
+        long systemTime = System.currentTimeMillis();//java.lang.System.currentTimeMillis (), which returns the number of milliseconds that have passed since midnight on January 1, 1970 UTC.
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.setTimeZone(TimeZone.getTimeZone("GMT+8"));//这里时区需要设置一下，不然会有8个小时的时间差
-        calendar.set(Calendar.HOUR_OF_DAY, 0);//设置为0：00点提醒
+        calendar.setTimeZone(TimeZone.getTimeZone("GMT+8"));//The time zone needs to be set here, otherwise there will be a time difference of 8 hours
+        calendar.set(Calendar.HOUR_OF_DAY, 0);//Set to 0:00 reminder
         calendar.set(Calendar.MINUTE, 0);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
-        //选择的定时时间
-        long selectTime = calendar.getTimeInMillis();//计算出设定的时间
-        //如果当前时间大于设置的时间，那么就从第二天的设定时间开始
+        //Selected timing
+        long selectTime = calendar.getTimeInMillis();//Calculate the set time
+        //If the current time is greater than the set time, then start from the set time the next day
         if (systemTime > selectTime) {
             calendar.add(Calendar.DAY_OF_MONTH, 1);
             selectTime = calendar.getTimeInMillis();
         }
-        long time = selectTime - systemTime;//计算现在时间到设定时间的时间差
-        long alarmTime = firstTime + time;//系统当前的时间+时间差
-        // 进行闹铃注册
+        long time = selectTime - systemTime;//Calculate the time difference from the current time to the set time
+        long alarmTime = firstTime + time;//System current time + time difference
+        // Register for the alarm
         AlarmManager am = (AlarmManager) this.getSystemService(ALARM_SERVICE);
         if (am != null) {
             am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, alarmTime, AlarmManager.INTERVAL_DAY, pi);

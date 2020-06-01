@@ -7,22 +7,20 @@ import java.util.Map;
 
 /**
  * @ClassName: StepSharedPreferencesUtil
- * @Description: SP存储工具类
- * @Author: yanxu5
- * @Date: 2019/8/19
+ * @Description: SP storage tools
  */
 
 public class StepSharedPreferencesUtil {
 
-    // 保存在本地的文件名
+    // File name saved locally
     public static final String FILE_NAME = "step_shared_data";
 
     /**
-     * 保存数据，根据获取到的数据的具体类型调用不同的保存方法
+     * Save data, call different save methods according to the specific type of data obtained
      *
-     * @param context 上下文环境
-     * @param key     键值
-     * @param object  保存对象（支持类型:String, Integer, Boolean, Float, Long）
+     * @param context
+     * @param key
+     * @param object  Save object (support type: String, Integer, Boolean, Float, Long)
      */
     public static void setParam(Context context, String key, Object object) {
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
@@ -44,11 +42,11 @@ public class StepSharedPreferencesUtil {
     }
 
     /**
-     * 获取数据，根据默认值得到保存的数据的具体类型，调用相对应的方法获取值
+     * Get data, get the specific type of saved data according to the default value, call the corresponding method to get the value
      *
-     * @param context       上下文环境
-     * @param key           键值
-     * @param defaultObject 当从本地没有取到值时返回的默认值（支持类型:String, Integer, Boolean, Float, Long）
+     * @param context
+     * @param key
+     * @param defaultObject The default value returned when no value is retrieved from the local (supported types: String, Integer, Boolean, Float, Long)
      * @return Object
      */
     public static Object getParam(Context context, String key, Object defaultObject) {
@@ -73,7 +71,7 @@ public class StepSharedPreferencesUtil {
     }
 
     /**
-     * 移除指定key对应的值
+     * Remove the value corresponding to the specified key
      *
      * @param context
      * @param key
@@ -86,7 +84,7 @@ public class StepSharedPreferencesUtil {
     }
 
     /**
-     * 清除所有数据
+     * Clear all data
      *
      * @param context
      */
@@ -98,7 +96,7 @@ public class StepSharedPreferencesUtil {
     }
 
     /**
-     * 查询某个key是否已经存在
+     * Query whether a key already exists
      *
      * @param context
      * @param key
@@ -110,7 +108,7 @@ public class StepSharedPreferencesUtil {
     }
 
     /**
-     * 返回所有的键值对
+     * Return all key-value pairs
      *
      * @param context
      * @return

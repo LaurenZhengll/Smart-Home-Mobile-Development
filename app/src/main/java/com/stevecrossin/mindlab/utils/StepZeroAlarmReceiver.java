@@ -7,9 +7,7 @@ import android.os.Build;
 
 /**
  * @ClassName: StepZeroAlarmReceiver
- * @Description: 零点的定时广播
- * @Author: yanxu5
- * @Date: 2019/8/23
+ * @Description: 0:00:00 broadcast
  */
 public class StepZeroAlarmReceiver extends BroadcastReceiver {
 
