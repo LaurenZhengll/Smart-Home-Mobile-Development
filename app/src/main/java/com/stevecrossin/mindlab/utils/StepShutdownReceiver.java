@@ -7,6 +7,8 @@ import android.content.Intent;
 /**
  * @ClassName: StepShutdownReceiver
  * @Description: Shutdown broadcast
+ * @Author: yanxu5
+ * @Date: 2019/8/19
  */
 public class StepShutdownReceiver extends BroadcastReceiver {
 

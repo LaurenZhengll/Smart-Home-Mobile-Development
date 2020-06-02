@@ -21,6 +21,8 @@ import java.util.TimeZone;
 /**
  * @ClassName: StepService
  * @Description: Service of the step of the day
+ * @Author: yanxu5
+ * @Date: 2019/8/19
  */
 public class StepService extends Service {
 
@@ -97,7 +99,7 @@ public class StepService extends Service {
         }
         Sensor countSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER);
         mStepCounter = new StepCounter(getApplicationContext(), mIsSeparate, mIsBoot);
-        mSensorManager.registerListener(mStepCounter, countSensor, SAMPLING_PERIOD_US);//注册监听
+        mSensorManager.registerListener(mStepCounter, countSensor, SAMPLING_PERIOD_US);//Register to Listener
     }
 
     @Override
@@ -146,5 +148,4 @@ public class StepService extends Service {
             am.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, alarmTime, AlarmManager.INTERVAL_DAY, pi);
         }
     }
-
 }

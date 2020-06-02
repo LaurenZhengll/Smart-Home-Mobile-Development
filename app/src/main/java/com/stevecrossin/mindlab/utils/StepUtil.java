@@ -5,6 +5,8 @@ import android.content.Context;
 /**
  * @ClassName: StepUtil
  * @Description: Pedometer related tools
+ * @Author: yanxu5
+ * @Date: 2019/8/19
  */
 public class StepUtil {
 

@@ -12,6 +12,8 @@ import android.os.SystemClock;
 /**
  * @ClassName: StepCounter
  * @Description: Sensor.TYPE_STEP_COUNTER (Android 4.4 and above) Count the steps of the day through the pedometer sensor, no background service is required
+ * @Author: yanxu5
+ * @Date: 2019/8/19
  */
 
 public class StepCounter implements SensorEventListener {

@@ -2,14 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.stevecrossin.mindlab">
 
-    <!-- 关于计步功能的相关权限 -->
+    <!-- Relevant permissions about step counting function -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
 
-    <!-- 计步处理器处理器权限 -->
+    <!-- Pedometer processor processor permissions -->
     <uses-feature
         android:name="android.hardware.sensor.stepcounter"
         android:required="true" />
@@ -42,13 +42,13 @@
         <activity android:name=".EditProfilePatient"/>
         <activity android:name=".HeartRate" />
         <activity android:name=".StepCounter"/>
-        <!--计步Service-->
+        <!--Step Count Service-->
         <service
             android:name=".utils.StepService"
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <!-- 系统启动完成后会调用 -->
+                <!-- called after system startup completed -->
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.DATE_CHANGED" />
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
@@ -58,7 +58,7 @@
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
             </intent-filter>
         </service>
-        <!--开机广播-->
+        <!--Boot broadcast-->
         <receiver
             android:name=".utils.StepBootCompleteReceiver"
             android:enabled="true"
@@ -68,14 +68,14 @@
             </intent-filter>
         </receiver>
 
-        <!-- 关机广播 -->
+        <!--Shutdown broadcast-->
         <receiver android:name=".utils.StepShutdownReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_SHUTDOWN" />
             </intent-filter>
         </receiver>
 
-        <!-- 零点定时广播 -->
+        <!--0:00 time broadcast -->
         <receiver android:name=".utils.StepZeroAlarmReceiver">
             <intent-filter>
                 <action android:name="alarm_0_separate" />

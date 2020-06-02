@@ -8,6 +8,8 @@ import android.os.Build;
 /**
  * @ClassName: StepBootCompleteReceiver
  * @Description: Boot up broadcast
+ * @Author: yanxu5
+ * @Date: 2019/8/19
  */
 public class StepBootCompleteReceiver extends BroadcastReceiver {
 

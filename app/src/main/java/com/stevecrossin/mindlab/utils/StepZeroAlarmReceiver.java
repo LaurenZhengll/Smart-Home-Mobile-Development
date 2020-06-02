@@ -8,6 +8,8 @@ import android.os.Build;
 /**
  * @ClassName: StepZeroAlarmReceiver
  * @Description: 0:00:00 broadcast
+ * @Author: yanxu5
+ * @Date: 2019/8/19
  */
 public class StepZeroAlarmReceiver extends BroadcastReceiver {
 
