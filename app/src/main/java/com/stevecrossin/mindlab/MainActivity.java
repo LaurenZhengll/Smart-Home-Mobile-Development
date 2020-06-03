@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        writeNewUser("890","Sam","12jk@gmail.com", "alskdf12");
+        writeNewUser("890","Sam","12jk@gmail.com", "alskdf12", "44 avenue street");
 
 
 
@@ -117,10 +117,10 @@ public class MainActivity extends AppCompatActivity {
 
     } */
 
-    public void writeNewUser(String userId, String name, String email, String password) {
+    public void writeNewUser(String userId, String name, String email, String password,String address) {
         personId = mRootReference.push().getKey();
 
-        User user = new User(name, email,password);
+        User user = new User(name, email,password,address);
         // mRootReference.child("users").child(userId).setValue(user);
         //userNode.setValue(user);
         mChildReference.child(personId).setValue(user);
