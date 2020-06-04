@@ -1,4 +1,5 @@
 package com.stevecrossin.mindlab;
+import java.util.ArrayList;
 
 public class User {
 
@@ -7,6 +8,7 @@ public class User {
     private String password;
     private String HeartRate;
     private String BloodPressure;
+    private ArrayList<Event> events = new ArrayList<>();
 
     public User() {
         //Default constructor required for calls to DataSnapshot.getValue(User.class)
@@ -58,5 +60,16 @@ public class User {
 
     public void setBloodPressure(String BloodPressure) {
         this.BloodPressure = BloodPressure;
+    }
+
+    public void setEvents(ArrayList<Event> events){
+        this.events = events;
+    }
+
+    public void addEvent(Event event){
+        if(events == null){
+            events = new ArrayList<>();
+        }
+        events.add(event);
     }
 }

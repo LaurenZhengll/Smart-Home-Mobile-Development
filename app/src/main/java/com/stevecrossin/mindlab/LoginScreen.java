@@ -18,14 +18,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
-import android.view.View;
+
 
 
 public class LoginScreen extends AppCompatActivity {
     public EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private Button btnLogin;
-    private Button loginBtn;
+    //private Button loginBtn;
 
     @Override
     public void onStart() {
@@ -48,17 +48,17 @@ public class LoginScreen extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
-        loginBtn = findViewById(R.id.login);
-        loginBtn.setOnClickListener(new LoginBtnOnClick());
+       // loginBtn = findViewById(R.id.login);
+        //loginBtn.setOnClickListener(new LoginBtnOnClick());
     }
 
-    private class LoginBtnOnClick implements View.OnClickListener {
+    /*private class LoginBtnOnClick implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(LoginScreen.this,MainActivity.class);
             startActivity(intent);
         }
-    }
+    }*/
 
 
     /*public void bypassLogin(View view) {
