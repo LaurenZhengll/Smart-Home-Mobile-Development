@@ -3,6 +3,8 @@ package com.stevecrossin.mindlab;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.location.Address;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -52,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        writeNewUser("890","Sam","12jk@gmail.com", "alskdf12", "80", "80/130" );
+
+        writeNewUser("890","Sam","12jk@gmail.com", "alskdf12", "80", "80/130", "42 Wallaby Way Sydney");
 
         // setContentView(R.layout.activity_main);
 
@@ -114,10 +117,10 @@ public class MainActivity extends AppCompatActivity {
 
     } */
 
-    public void writeNewUser(String userId, String name, String email, String password, String HeartRate, String BloodPressure) {
+    public void writeNewUser(String userId, String name, String email, String password, String HeartRate, String BloodPressure, String address) {
         personId = mRootReference.push().getKey();
 
-        User user = new User(name, email, password, HeartRate, BloodPressure);
+        User user = new User(name, email, password, HeartRate, BloodPressure, address);
         // mRootReference.child("users").child(userId).setValue(user);
         //userNode.setValue(user);
         mChildReference.child(personId).setValue(user);

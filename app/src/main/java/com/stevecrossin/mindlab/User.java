@@ -1,4 +1,6 @@
 package com.stevecrossin.mindlab;
+import android.location.Address;
+
 import java.util.ArrayList;
 
 public class User {
@@ -8,18 +10,24 @@ public class User {
     private String password;
     private String HeartRate;
     private String BloodPressure;
+    private String address;
     private ArrayList<Event> events = new ArrayList<>();
 
     public User() {
         //Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public User(String username, String email, String password, String HeartRate, String BloodPressure) {
+    public User(String username, String email, String password, String HeartRate, String BloodPressure, String address) {
+
         this.username = username;
         this.email = email;
         this.password = password;
         this.HeartRate = HeartRate;
         this.BloodPressure = BloodPressure;
+        this.address = address;
+    }
+
+    public User(String username, String email, String password, String address) {
     }
 
     public String getUsername() {
@@ -71,5 +79,13 @@ public class User {
             events = new ArrayList<>();
         }
         events.add(event);
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }
